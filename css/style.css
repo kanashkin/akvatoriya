@@ -1,0 +1,164 @@
+/* Base styles */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+input {
+    width: 100%;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    font-family: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Gogol';
+    src: url(../fonts/gogol_regular.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lighthaus';
+    src: url(../fonts/Lighthaus.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klik';
+    src: url(../fonts/Klik-Light.otf) format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* COMMON STYLES */
+
+.click-btn {
+    padding: 21px 50px;
+    font-family: 'Klik';
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 100%;
+    border-radius: 18px;
+}
+
+.gold-btn {
+    color: #ffffff;
+    background: #AD9361;
+}
+
+/* HEADER */
+
+.header {
+    position: absolute;
+    padding: 18px 45px;
+    width: 100%;
+}
+
+.header__wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-item {
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.nav {
+    width: 53.91%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 37% ;
+}
+
+.numbers__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* MAIN PAGE MAIN PAGE MAIN PAGE MAIN PAGE MAIN PAGE MAIN PAGE  */
+
+/* PROMO SECTION */
+
+.promo {
+    padding: 286px 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/main-page/promo/bg.png) center / cover no-repeat;
+}
+
+.promo-title {
+    margin-top: 34px;
+}
+
+.promo-subtitle {
+    margin-top: 35.5px;
+}
+
+.promo-btn {
+    margin-top: 130px;
+}
+
+.promo-tagline {
+    margin-top: 42px;
+    color: #ffffff;
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+}
