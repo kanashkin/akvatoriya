@@ -40,7 +40,6 @@ span {
 
 .container {
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* FONTS */
@@ -51,7 +50,7 @@ span {
     font-family: 'Gogol';
     src: url(../fonts/gogol_regular.otf) format('opentype');
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face {
@@ -82,6 +81,37 @@ span {
 .gold-btn {
     color: #ffffff;
     background: #AD9361;
+}
+
+.gold {
+    color: #AD9361;
+}
+
+.gold-gradient {
+    background: linear-gradient(74.68deg, rgb(191, 150, 60),rgb(214, 191, 109),rgb(202, 168, 82),rgb(212, 184, 87),rgb(221, 205, 150));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.video__wrapper {
+    position: relative;
+}
+
+.video-play {
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.video-play.unactive {
+    opacity: 0;
+    z-index: -1;
 }
 
 /* HEADER */
@@ -161,4 +191,149 @@ span {
     font-size: 64px;
     font-weight: 400;
     line-height: 80px;
+}
+
+/* COMPANY SECTION */
+
+.company {
+    padding: 220px 0 157px;
+    background: url(../img/main-page/company/bg.png) center / cover no-repeat;
+}
+
+.company__wrapper {
+    max-width: 1448px;
+}
+
+.company-title {
+    font-family: 'Gogol';
+    font-size: 98px;
+    font-weight: 400;
+    line-height: 98px;
+    text-align: center;
+}
+
+.company__info {
+    margin-top: 91px;
+    display: grid;
+    row-gap: 91px;
+    grid-template-columns: repeat(2, 570px);
+    justify-content: space-between;
+}
+
+.company__info-item {
+    font-family: 'Klik';
+    color: #fff;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 60px;
+    letter-spacing: 4%;
+}
+
+/* RENTAL SECTION */
+
+.rental {
+    border-top: 1px solid #BF963C;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+.rental::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(10.00deg, rgba(19, 37, 63, 0),rgb(8, 9, 34) 100%);
+}
+
+.rental__item {
+    padding: 40px 0;
+    text-align: center;
+    background-size: cover;
+}
+
+.rental__item:nth-child(1) {
+    background-image: url(../img/main-page/company/rental-1.png);
+}
+
+.rental__item:nth-child(2) {
+    background-image: url(../img/main-page/company/rental-2.png);
+}
+
+.rental__item:nth-child(3) {
+    background-image: url(../img/main-page/company/rental-3.png);
+}
+
+.rental__item-name {
+    position: relative;
+    z-index: 2;
+    font-family: 'Lighthaus';
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 4%;
+}
+
+.rental__item-price {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 4%;
+}
+
+/* HOW SECTION */
+
+.how-blue {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 276px;
+    bottom: -14%;
+    background: linear-gradient(180.00deg, rgba(19, 22, 63, 0),rgb(19, 22, 63) 63.585%);
+}
+
+.how-video {
+    position: relative;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.how__texts {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(180.00deg, rgb(19, 22, 63),rgb(15, 7, 39) 26.042%,rgb(6, 3, 24) 52.083%,rgb(11, 2, 19) 74.711%,rgb(19, 22, 63) 100%);
+}
+
+.how-title {
+    max-width: 1111px;
+    font-family: 'Lighthaus';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 4%;
+}
+
+.how-descr {
+    margin-top: 38px;
+    max-width: 1624px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
 }
