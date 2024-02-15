@@ -38,6 +38,10 @@ span {
     font-family: inherit;
 }
 
+body {
+    background: rgb(19, 22, 63);
+}
+
 .container {
     margin: 0 auto;
 }
@@ -69,6 +73,41 @@ span {
 
 /* COMMON STYLES */
 
+.title {
+    color: rgb(255, 255, 255);
+    font-family: 'Lighthaus';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 4%;
+    text-align: center;
+}
+
+.gold-square {
+    position: relative;
+    width: fit-content;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Klik';
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+.gold-square::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 12px;
+    height: 12px;
+    background: #AD9361;
+    transform: rotate(45deg);
+}
+
 .click-btn {
     padding: 21px 50px;
     font-family: 'Klik';
@@ -83,8 +122,18 @@ span {
     background: #AD9361;
 }
 
+.violet-btn {
+    color: #AD9361;
+    border: 1px solid #AD9361;
+    background: #251C64;
+}
+
 .gold {
     color: #AD9361;
+}
+
+.gold-light {
+    color: #EBDEC5;
 }
 
 .gold-gradient {
@@ -112,6 +161,44 @@ span {
 .video-play.unactive {
     opacity: 0;
     z-index: -1;
+}
+
+.page__form {
+    width: 100%;
+}
+
+.page-input {
+    border-radius: 20px;
+    text-align: center;
+    height: 71px;
+    background: rgb(255, 255, 255);
+    color: #858484;
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.page__form-title {
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+}
+
+.page__form-accept {
+    width: fit-content;
+    margin: 0 0 0 auto;
+    font-family: 'Klik';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.page__form-inputs {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 /* HEADER */
@@ -309,6 +396,7 @@ span {
 }
 
 .how__texts {
+    padding-bottom: 60px;
     position: relative;
     z-index: 3;
     display: flex;
@@ -336,4 +424,285 @@ span {
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
+}
+
+/* ACTIONS SECTION */
+
+.actions {
+    padding: 140px 30px 51px 30px;
+    background: linear-gradient(180.00deg, rgb(19, 22, 63),rgb(15, 7, 39) 26.042%,rgb(6, 3, 24) 52.083%,rgb(11, 2, 19) 74.711%,rgb(19, 22, 63) 100%);
+}
+
+.actions-title {
+    color: rgb(255, 255, 255);
+    font-family: 'Lighthaus';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 4%;
+    text-align: center;
+}
+
+.actions__items {
+    max-width: 1760px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.actions__item {
+    width: 33%;
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actions__item-title {
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+}
+
+.actions__item-img {
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 40px;
+}
+
+.actions__item__info {
+    margin-top: 52px;
+    max-width: 464px;
+}
+
+.actions__item-descr {
+    color: rgb(255, 255, 255);
+    font-family: 'Lighthaus';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 4%;
+}
+
+.actions__item-price {
+    margin-top: 24px;
+}
+
+.actions-btn {
+    display: block;
+    margin: 9px auto 0 auto;
+}
+
+.actions-info {
+    width: fit-content;
+    display: block;
+    margin: 26px 0 0 auto;
+    font-family: 'Klik';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/* EVENTS SECTION */
+
+.events {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 188px 101px 44px 78px;
+    height: 1080px;
+    background: url(../img/main-page/events/bg.png) center / cover no-repeat;
+}
+
+.events::after {
+    content: '';
+    height: 224px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180.00deg, rgba(19, 22, 63, 0),rgb(19, 22, 63) 93.646%);
+}
+
+.events-title {
+    color: rgb(255, 255, 255);
+    font-family: 'Lighthaus';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    max-width: fit-content;
+}
+
+.events-tagline {
+    position: relative;
+    z-index: 2;
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+    width: fit-content;
+}
+
+.events-line {
+    position: absolute;
+    top: 372px;
+    left: 270px;
+}
+
+.stage__item {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.stage__item-text {
+    color: #ffffff;
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 52px;
+}
+
+.stage__item:first-child {
+    width: 411px;
+    top: 212px;
+    left: 78px;
+}
+.stage__item:nth-child(2) {
+    width: 482px;
+    bottom: 112px;
+    left: 78px;
+}
+.stage__item:nth-child(3) {
+    width: 365px;
+    top: 459px;
+    left: 565px;
+}
+.stage__item:nth-child(4) {
+    width: 474px;
+    top: 336px;
+    right: 466px;
+}
+.stage__item:nth-child(5) {
+    width: 472px;
+    bottom: 179px;
+    right: 101px;
+}
+
+/* CALC SECTION */
+
+.calc {
+    padding: 120px 0 51px;
+}
+
+.calc__wrapper {
+    max-width: 1645px;
+}
+
+.calc__select {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.calc__item-title {
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.calc__item-list {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    max-height: 241px;
+    flex-wrap: wrap;
+    column-gap: 60px;
+}
+
+.calc__item-list.guests {
+    max-height: 100px;
+    column-gap: 25px;
+}
+
+.calc-input__wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.calc-input {
+    width: 19px;
+    height: 19px;
+    accent-color: #251C64;
+}
+
+.calc-input__descr {
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.date-input {
+    margin-top: 26px;
+}
+
+.select-form {
+    margin-top: 60px;
+}
+
+/* EXCURSIONS SECTION */
+
+.excursions {
+    padding: 200px 0 193px;
+}
+
+.excursions__wrapper {
+    max-width: 1467px;
+}
+
+.excursions-subtitle {
+    text-align: center;
+    margin-top: 112px;
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 80px;
+}
+
+.excursions__content {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.excursions__block {
+    max-width: 53%;
+}
+
+.excursions-descr {
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.excursions__block-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 95px;
 }
