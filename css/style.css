@@ -88,6 +88,11 @@ body {
     width: fit-content;
 }
 
+.gold-square img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .price {
     display: flex;
     flex-direction: column;
@@ -129,11 +134,11 @@ body {
 }
 
 .gold {
-    color: #AD9361;
+    color: #AD9361 !important;
 }
 
 .gold-light {
-    color: #EBDEC5;
+    color: #EBDEC5 !important;
 }
 
 .gold-gradient {
@@ -569,6 +574,16 @@ body {
     line-height: 52px;
 }
 
+.stage__item-img {
+    position: relative;
+}
+
+.stage-1-dop {
+    position: absolute;
+    right: -30px;
+    top: 66px;
+}
+
 .stage__item:first-child {
     width: 411px;
     top: 212px;
@@ -705,4 +720,176 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 95px;
+}
+
+/* FAQ SECTION */
+
+.faq {
+    padding: 200px 0 81px;
+}
+
+.faq__wrapper {
+    padding-right: 130px;
+}
+
+.faq-title {
+    width: fit-content;
+    margin: 0 0 0 auto;
+    color: rgb(255, 255, 255);
+    font-family: 'Gogol';
+    font-size: 98px;
+    font-weight: 400;
+    line-height: 98px;
+}
+
+.faq__content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq__link {
+    max-width: 50%;
+}
+
+.faq__list {
+    max-width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.faq__list-item {
+    color: rgb(173, 147, 97);
+    font-family: 'Klik';
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 200px 0 36px;
+}
+
+.about__wrapper {
+    max-width: 1565px;
+}
+
+.about-text {
+    margin-top: 64px;
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.advantages {
+    margin-top: 92px;
+}
+
+.advantages-title {
+    font-family: 'Gogol';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.advantages__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.advantages__wrapper.top {
+    margin-top: 88px;
+    gap: 96px;
+}
+
+.advantages__wrapper.bottom {
+    margin-top: 44px;
+    gap: 57px;
+}
+
+.advantages__wrapper.bottom .advantages__item:first-child {
+    width: 60%;
+}
+
+.advantages__wrapper.bottom .advantages__item:nth-child(2){
+    width: 40%;
+}
+
+.advantages__item {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.advantages__item-text {
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+/* CONTACTS SECTION */
+
+.contacts {
+    padding: 108px 0 40px;
+}
+
+.contacts__wrapper {
+    max-width: 1631px;
+}
+
+.yandex-map {
+    width: 46%;
+    border-radius: 12px;
+}
+
+.contacts__content {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts__items {
+    padding: 49px 60px 49px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contacts-item {
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 52px;
+}
+
+.contacts__socials {
+    display: inline-flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.contacts__info {
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__info-item {
+    font-family: 'Klik';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
 }
