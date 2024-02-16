@@ -17,3 +17,19 @@ function playVideo() {
 }
 
 playVideo()
+
+function mobileMenu() {
+    const openBtn = document.querySelector('.menu-btn.open')
+    const closeBtn = document.querySelector('.menu-btn.close')
+    const menu = document.querySelector('.mobile__menu')
+
+    openBtn.addEventListener('click', function() {
+        menu.classList.add('active')
+    })
+
+    closeBtn.addEventListener('click', function() {
+        menu.classList.remove('active')
+    })
+}
+
+mobileMenu()

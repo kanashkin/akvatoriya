@@ -343,7 +343,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     display: inline-flex;
 }
 
-.phone-btn img {
+.header-btns img {
     max-width: 100%;
 }
 
@@ -395,7 +395,10 @@ li.header-item.dropdown > a:hover + .sub__list,
     fill: #EBDEC5;
 }
 
-
+.mobile__menu,
+.menu-btn {
+    display: none;
+}
 
 @media(max-width: 1800px) {
     .header-item {
@@ -455,6 +458,85 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .sub__list svg {
         width: 60%;
+    }
+}
+
+@media(max-width: 767px) {
+    .header {
+        padding: 16px;
+    }
+    .header .nav {
+        display: none;
+    }
+    .numbers.mobile {
+        display: none;
+    }
+    .header-btns {
+        display: flex;
+        gap: 16px;
+    }
+    .menu-btn {
+        display: inline-flex;
+    }
+    .header-btns button {
+        width: 28px;
+    }
+    .mobile__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background: rgba(19, 22, 63, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        opacity: 0;
+        z-index: -1;
+        transition: .4s all;
+    }
+    .mobile__menu.active {
+        opacity: 1;
+        z-index: 5;
+    }
+    .mobile__menu__header {
+        padding-bottom: 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .numbers {
+        margin-top: 24px;
+        width: fit-content;
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 24px;
+    }
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+    }
+    .sub__list {
+        margin: 12px 0 0 auto;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: 80%;
+        gap: 20px;
+        padding-top: 0;
+        position: static;
+        opacity: 1;
+        z-index: 1;
+    }
+    .nav__list-item {
+        width: fit-content;
+        text-align: right;
+    }
+    .sub-item:last-child span {
+        width: 100%;
     }
 }
 
