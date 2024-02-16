@@ -236,6 +236,21 @@ body {
     }
 }
 
+@media(max-width: 1439px) {
+    .click-btn {
+        padding: 20px 24px;
+        font-size: 20px;
+    }
+    .title {
+        font-size: 40px;
+        line-height: 52px;
+    }
+    .price {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
 /* HEADER */
 
 .header {
@@ -259,6 +274,21 @@ body {
     line-height: 100%;
 }
 
+.header-item a {
+    transition: .3s all;
+}
+
+li.header-item.active > a,
+li.header-item > a:hover {
+    color: #AD9361;
+}
+
+li.header-item.dropdown > a:hover + .sub__list,
+.sub__list:hover {
+    z-index: 2;
+    opacity: 1;
+}
+
 .nav {
     width: 53.91%;
 }
@@ -267,6 +297,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .numbers {
@@ -290,6 +321,56 @@ body {
     max-width: 100%;
 }
 
+.sub__list {
+    padding-top: 35px;
+    left: 0;
+    position: absolute;
+    display: flex;
+    gap: 64px;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.sub-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.sub-item:last-child span {
+    width: 140%;
+}
+
+.sub-item .sub-item__title,
+.sub-item svg path,
+.sub-item svg circle,
+.sub-item svg ellipse {
+    transition: .3s all;
+}
+
+.sub-item:hover .sub-item__title {
+    color: #EBDEC5 !important;
+}
+
+.sub-item:hover svg.fill path {
+    fill: #EBDEC5;
+}
+
+.sub-item:hover svg.stroke path,
+.sub-item:hover svg.stroke circle {
+    stroke: #EBDEC5;
+}
+
+.sub-item:hover svg.stroke ellipse,
+.sub-item:hover svg path.fill  {
+    fill: #EBDEC5;
+}
+
+
+
 @media(max-width: 1800px) {
     .header-item {
         font-size: 20px;
@@ -302,6 +383,52 @@ body {
     }
     .numbers__item {
         gap: 14px;
+    }
+    .sub__list {
+        gap: 56px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .header {
+        padding: 22px 24px 6px 24px;
+    }
+    .header-item {
+        font-size: 16px;
+    }
+    .numbers.mobile {
+        display: flex;
+        width: fit-content;
+        margin: 0 0 16px auto;
+    }
+    .numbers.desktop {
+        display: none;
+    }
+    .phone-btn {
+        width: 36px;
+    }
+    .nav {
+        width: fit-content;
+    }
+    .nav__list {
+        gap: 24.5px;
+    }
+    .logo {
+        width: 36px;
+    }
+    .logo img {
+        max-width: 100%;
+    }
+    .sub__list {
+        left: -30px;
+        gap: 28px;
+        padding-top: 30px;
+    }
+    .sub-item {
+        gap: 4px;
+    }
+    .sub__list svg {
+        width: 60%;
     }
 }
 
@@ -362,6 +489,28 @@ body {
         font-size: 56px;
         line-height: 72px;
     }
+    .promo-btn {
+        margin-top: 185px;
+    }
+    .promo-tagline {
+        margin-top: 44px;
+        font-size: 40px;
+        line-height: 56px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .promo {
+        padding: 330px 0 72px;
+    }
+    .promo-logo {
+        object-fit: contain;    
+        width: 172.25px;
+    }
+    .promo-title {
+        margin-top: 24px;
+        height: 61.76px;
+    }
 }
 
 /* COMPANY SECTION */
@@ -418,8 +567,29 @@ body {
     .company__info-item {
         font-size: 40px;
         line-height: 52px;
+    } 
+}
+
+@media(max-width: 1439px) {
+    .company {
+        padding: 130px 0;
     }
-    
+    .company__wrapper {
+        max-width: 577px;
+    }
+    .company-title {
+        font-size: 64px;
+    }
+    .company__info {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
+    .company__info-item {
+        font-size: 32px;
+        line-height: 40px;
+    }
 }
 
 /* RENTAL SECTION */
@@ -490,6 +660,23 @@ body {
     }
 }
 
+@media(max-width: 1439px) {
+    .rental {
+        display: flex;
+        flex-direction: column;
+    }
+    .rental__item {
+        padding: 40px 0;
+    }
+    .rental__item-name {
+        font-size: 32px;
+    }
+    .rental__item-price {
+        font-size: 28px;
+        line-height: 52px;
+    }
+}
+
 /* HOW SECTION */
 
 .how-blue {
@@ -540,10 +727,21 @@ body {
     }
 }
 
+@media(max-width: 1439px) {
+    .how__texts {
+        padding: 0 56px 88px 56px;
+    }
+    .how-descr {
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
 /* ACTIONS SECTION */
 
 .actions {
-    padding: 140px 30px 51px 30px;
+    padding: 140px 0 51px;
     background: linear-gradient(180.00deg, rgb(19, 22, 63),rgb(15, 7, 39) 26.042%,rgb(6, 3, 24) 52.083%,rgb(11, 2, 19) 74.711%,rgb(19, 22, 63) 100%);
 }
 
@@ -601,7 +799,7 @@ body {
 .actions-info {
     width: fit-content;
     display: block;
-    margin: 26px 0 0 auto;
+    margin: 26px 30px 0 auto;
     font-family: 'Klik';
     font-size: 16px;
     font-weight: 300;
@@ -621,8 +819,51 @@ body {
         line-height: 32px;
     }
     .actions-info {
-        margin: 0 0 0 auto;
+        margin: 0 30px 0 auto;
         font-size: 14px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .actions {
+        padding: 120px 0 70px;
+    }
+    .actions__items {
+        margin-top: 92px;
+        max-width: fit-content;
+        justify-content: flex-start;
+        padding: 0;
+        padding-left: 120px;
+        overflow-x: scroll;
+    }
+    .actions__items::-webkit-scrollbar {
+        display: none;
+    }
+    .actions__item {
+        margin-top: 0;
+        width: fit-content;
+        min-width: 60%;
+    }
+    .actions__item-title {
+        font-size: 40px;
+        line-height: 56px;
+    }
+    .actions__item__info {
+        max-width: 100%;
+        width: 95%;
+    }
+    .actions__item-descr {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .actions__item-descr br {
+        display: none;
+    }
+    .actions-btn {
+        margin-top: 56px;
+    }
+    .actions-info {
+        margin: 32px auto 0 auto;
     }
 }
 
@@ -636,7 +877,7 @@ body {
     align-items: flex-end;
     padding: 188px 0 44px 0;
     height: 1080px;
-    background: url(../img/main-page/events/bg.png) center / cover no-repeat;
+    background: url(../img/common-blocks/events/bg.png) center / cover no-repeat;
 }
 
 .events::after {
@@ -855,8 +1096,7 @@ body {
         padding: 72px 0 62px;
     }
     .calc__wrapper {
-        max-width: 1302px;
-        margin: 0 auto 0 0;
+        max-width: 1375px;
     }
     .calc__select {
         margin-top: 36px;
