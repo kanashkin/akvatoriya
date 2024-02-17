@@ -11,7 +11,7 @@
 <body>
     <div class="mobile__menu">
         <div class="mobile__menu__header">
-            <a class="logo" href="">
+            <a class="logo" href="index.html">
                 <img src="img/header/logo.png" alt="">
             </a>
             <div class="header-btns">
@@ -149,7 +149,7 @@
             </div>
         </div>
         <div class="header__wrapper">
-            <a class="logo" href="">
+            <a class="logo" href="index.html">
                 <img src="img/header/logo.png" alt="">
             </a>
             <nav class="nav">
@@ -401,28 +401,104 @@
             </div>
             <div class="events-tagline gold">Доверьтесь экспертам!</div>
         </section>
-        <section class="relax">
-            <div class="container">
-                <h2 class="relax-title gold-light">Так отдыхают наши клиенты</h2>
-            </div>
-            <div class="swiper relax-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/common-blocks/relax/01.png" alt="">
+        <section class="calc">
+            <div class="calc__wrapper container">
+                <h2 class="calc-title title">Рассчёт стоимости мероприятия</h2>
+                <div class="calc__select">
+                    <div class="calc__select__item calc__item">
+                        <h3 class="calc__item-title gold">Что проводим?</h3>
+                        <div class="calc__item-list">
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="event-title">
+                                <span class="calc-input__descr">выпускной</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="event-title">
+                                <span class="calc-input__descr">корпоратив</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="event-title">
+                                <span class="calc-input__descr">свадьба</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="event-title">
+                                <span class="calc-input__descr">другое</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="img/common-blocks/relax/02.png" alt="">
+                    <div class="calc__select__item calc__item">
+                        <h3 class="calc__item-title gold">Дополнения</h3>
+                        <div class="calc__item-list">
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">ведущий мероприятия</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">DJ с оборудованием</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">фото/видеосъёмка</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">ресторанное обслуживание</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">дополнительный декор</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">живая музыка</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="checkbox">
+                                <span class="calc-input__descr">экскурсовод</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="img/common-blocks/relax/03.png" alt="">
+                    <div class="calc__select__item calc__item">
+                        <h3 class="calc__item-title gold">Количество гостей</h3>
+                        <div class="calc__item-list guests">
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="guests">
+                                <span class="calc-input__descr">до 30</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="guests">
+                                <span class="calc-input__descr">до 50</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="guests">
+                                <span class="calc-input__descr">до 100</span>
+                            </label>
+                            <label class="calc-input__wrapper" for="">
+                                <input class="calc-input" type="radio" name="guests">
+                                <span class="calc-input__descr">до 150</span>
+                            </label>
+                        </div>
+                        <div class="calc__select__item calc__item calc__item-sub">
+                            <h3 class="calc__item-title gold">Дата мероприятия</h3>
+                            <input class="page-input date-input" type="text" placeholder="дд.мм.гг">
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="img/common-blocks/relax/01.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/common-blocks/relax/02.png" alt="">
+                    <div class="calc__select__item calc__item">
+                        <h3 class="calc__item-title gold">Дата мероприятия</h3>
+                        <input class="page-input date-input" type="text" placeholder="дд.мм.гг">
                     </div>
                 </div>
+                <form class="page__form select-form">
+                    <h3 class="page__form-title gold">Оставить заявку</h3>
+                    <p class="page__form-accept gold">Нажимая кнопку, Вы даёте согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</p>
+                    <div class="page__form-inputs">
+                        <input class="page-input" type="text" placeholder="Ваше имя">
+                        <input class="page-input phone-input" type="text" placeholder="+7(999)678-4523">
+                        <input class="page-input" type="email" placeholder="e-mail">
+                        <button type="submit" class="click-btn gold-btn">рассчитать</button>
+                    </div>
+                </form>
             </div>
         </section>
         <section class="calc">
@@ -594,6 +670,8 @@
         </section>
     </main>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

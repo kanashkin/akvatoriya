@@ -11,7 +11,7 @@
 <body>
     <div class="mobile__menu">
         <div class="mobile__menu__header">
-            <a class="logo" href="">
+            <a class="logo" href="index.html">
                 <img src="img/header/logo.png" alt="">
             </a>
             <div class="header-btns">
@@ -149,7 +149,7 @@
             </div>
         </div>
         <div class="header__wrapper">
-            <a class="logo" href="">
+            <a class="logo" href="index.html">
                 <img src="img/header/logo.png" alt="">
             </a>
             <nav class="nav">
@@ -513,16 +513,16 @@
                         <input class="page-input date-input" type="text" placeholder="дд.мм.гг">
                     </div>
                 </div>
-                <div class="page__form select-form">
+                <form class="page__form select-form">
                     <h3 class="page__form-title gold">Оставить заявку</h3>
                     <p class="page__form-accept gold">Нажимая кнопку, Вы даёте согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</p>
                     <div class="page__form-inputs">
                         <input class="page-input" type="text" placeholder="Ваше имя">
-                        <input class="page-input" type="text" placeholder="+7(999)678-4523">
+                        <input class="page-input phone-input" type="text" placeholder="+7(999)678-4523">
                         <input class="page-input" type="email" placeholder="e-mail">
                         <button type="submit" class="click-btn gold-btn">рассчитать</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         <section class="contacts">
@@ -595,5 +595,8 @@
     </main>
 
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
 </body>
 </html>
