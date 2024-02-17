@@ -40,6 +40,7 @@ span {
 
 body {
     background: rgb(19, 22, 63);
+    overflow-x: hidden;
 }
 
 .container {
@@ -206,7 +207,115 @@ body {
     gap: 24px;
 }
 
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* VESSELS */
+
+.vessel__card {
+    width: 400px;
+    overflow: hidden;
+}
+
+.vessel__card__header {
+    position: relative;
+    height: 196px;
+}
+
+.vessel__peoples,
+.vessel__peoples-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.vessel__peoples-bg {
+    bottom: -2px;
+    right: -1px;
+}
+
+.vessel__card-photo {
+    object-fit: cover;
+    width: 100%;
+    height: inherit;
+    border-radius: 30px 30px 0 0;
+}
+
+.vessel__peoples-amount {
+    padding-right: 15px;
+    position: relative;
+    z-index: 2;
+    font-family: 'Klik';
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.vessel__peoples-amount::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: url(../img/vessels/peoples-after.png) center / contain no-repeat;
+}
+
+.vessel__card__body {
+    padding: 20px 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vessel__card-name {
+    font-family: 'Klik';
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+.vessel__card-price {
+    margin-top: 12px;
+    font-family: 'Klik';
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+.vessel__card-btn {
+    border-radius: 0 0 30px 30px;
+    padding: 6.5px 0 10.5px;
+    width: 100%;
+    background: #AD9361;
+    color: #fff;
+    font-family: 'Klik';
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
 @media(max-width: 1800px) {
+    .vessel__peoples-amount {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .vessel__card-name {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .vessel__card-price {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .vessel__card-btn {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
     .click-btn {
         font-size: 28px;
         padding: 22px 40px;
@@ -236,6 +345,24 @@ body {
 }
 
 @media(max-width: 1439px) {
+    .vessel__peoples-amount {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .vessel__card-name {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .vessel__card-price {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .vessel__card-btn {
+        padding: 10px 0 14px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     .click-btn {
         padding: 20px 24px;
         font-size: 20px;
@@ -279,6 +406,38 @@ body {
 }
 
 @media(max-width: 767px) {
+    .vessel__peoples-amount {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .vessel__peoples-amount::after {
+        width: 16px;
+        height: 16px;
+    }
+    .vessel__peoples-bg {
+        height: 35px;
+    }
+    .vessel__card__header {
+        height: 140px;
+    }
+    .vessel__card__body {
+        padding: 12px 0;
+    }
+    .vessel__card-name {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .vessel__card-price {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .vessel__card-btn {
+        padding: 7px 0 9px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
     .click-btn {
         font-size: 16px;
         padding: 12px 16px;
@@ -570,7 +729,7 @@ li.header-item.dropdown > a:hover + .sub__list,
         margin: 12px 0 0 auto;
         flex-wrap: wrap;
         justify-content: flex-end;
-        max-width: 80%;
+        max-width: 100%;
         gap: 20px;
         padding-top: 0;
         position: static;
@@ -583,6 +742,12 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .sub-item:last-child span {
         width: 100%;
+    }
+    .sub__list svg {
+        width: 60%;
+    }
+    .sub__list .sub-item__title {
+        font-size: 14px;
     }
 }
 
@@ -2046,5 +2211,393 @@ li.header-item.dropdown > a:hover + .sub__list,
     .contacts__info-item {
         font-size: 12px;
         line-height: 20px;
+    }
+}
+
+/* VIPUSKNOY PAGE VIPUSKNOY PAGE VIPUSKNOY PAGE VIPUSKNOY PAGE */
+
+.event-bg {
+    position: absolute;
+    top: 250px;
+    left: -471px;
+    z-index: -1;
+}
+
+.event {
+    padding-top: 145px;
+}
+
+.event__content {
+    margin-top: 90px;
+}
+
+.event__wrapper {
+    max-width: 1876px;
+}
+
+.event__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-video {
+    width: 42%;
+}
+
+.event-video img {
+    border-radius: 30px;
+    width: 100%;
+}
+
+.event-descr {
+    max-width: 45%;
+    color: rgb(255, 255, 255);
+    font-family: 'Klik';
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+@media(max-width: 1800px) {
+    .event-bg {
+        max-width: 90%;
+    }
+    .event__wrapper {
+        max-width: 1332px;
+    }
+    .event__content {
+        margin-top: 98px;
+        align-items: flex-start;
+    }
+    .event-video {
+        width: 45%;
+    }
+    .event-descr {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .event-bg {
+        left: -20%;
+        max-width: 100%;
+    }
+    .event {
+        padding-top: 130px;
+    }
+    .event__wrapper {
+        max-width: 662px;
+    }
+    .event__content {
+        flex-direction: column;
+        gap: 60px;
+        margin-top: 52px;
+    }
+    .event-video,
+    .event-descr {
+        max-width: 100%;
+        width: 100%;
+    }
+    .event-descr {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media(max-width: 767px) {
+    .event-bg {
+        max-width: 120%;
+        object-fit: contain;
+    }
+    .event {
+        padding-top: 84px;
+    }
+    .event-video img {
+        border-radius: 0;
+    }
+    .event__content {
+        margin-top: 32px;
+    }
+}
+
+/* RECOMEND SECTION */
+
+.recomend {
+    margin-top: 104px;
+}
+
+.recomend__wrapper {
+    max-width: 1405px;
+}
+
+.recomend-title {
+    text-align: left;
+}
+
+.recomend-price {
+    margin-top: 42px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+.recomend-price span {
+    font-size: 32px;
+}
+
+.recomend__content {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+}
+
+@media(max-width: 1800px) {
+    .recomend {
+        margin-top: 80px;
+    }
+    .recomend-price {
+        font-size: 32px;
+    }
+    .recomend__wrapper {
+        max-width: 1380px;
+    }
+    .recomend__content {
+        gap: 60px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .recomend__wrapper {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+    .recomend-title,
+    .recomend-price {
+        max-width: 662px;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .recomend-price {
+        margin-top: 24px;
+    }
+    .recomend__content {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 40px;
+        gap: 40px;
+    }
+    .recomend__content::-webkit-scrollbar {
+        display: none;
+    }
+    .recomend .vessel__card {
+        min-width: 320px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+    .recomend {
+        margin-top: 40px;
+    }
+    .recomend-title,
+    .recomend-price {
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .recomend-price {
+        margin-top: 8px;
+    }
+    .recomend__content {
+        padding-left: 20px;
+        gap: 10px;
+    }
+}
+
+/* FOOD SECTION */
+
+.food {
+    padding: 140px 0;
+}
+
+.food__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1876px;
+}
+
+.food-img {
+    width: 42%;
+    border-radius: 16px;
+}
+
+.food__content {
+    max-width: 45%;
+}
+
+.food-title {
+    text-align: left;
+}
+
+.food-descr {
+    margin-top: 60px;
+    font-family: 'Klik';
+    color: #fff;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+@media(max-width: 1800px) {
+    .food {
+        padding: 120px 0;
+    }
+    .food__wrapper {
+        max-width: 1332px;
+        align-items: flex-start;
+    }
+    .food-img{
+        width: 45%;
+    }
+    .food-descr {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .food-descr {
+        margin-top: 42px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .food {
+        padding: 80px 0;
+    }
+    .food__wrapper {
+        max-width: 662px;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .food-img,
+    .food__content {
+        max-width: 100%;
+        width: 100%;
+    }
+    .food-descr {
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media(max-width: 767px) {
+    .food {
+        padding: 52px 0;
+    }
+    .food-img {
+        border-radius: 0;
+    }
+}
+
+/* RELAX SECTION */
+
+.relax {
+    padding: 45px 0;
+}
+
+.relax-title {
+    text-align: center;
+    font-family: 'Gogol';
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 72px;
+}
+
+.relax-swiper {
+    margin-top: 87px;
+}
+
+.relax-swiper .swper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.swiper-slide {
+	transition: all 0.5s ease;
+	padding: 80px 0;
+}
+.swiper-slide-active {
+	transform: scale(1.5) !important;
+}
+
+@media(max-width: 1439px) {
+    .relax {
+        padding: 40px 0;
+    }
+    .relax-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .relax-swiper {
+        margin-top: 55px;
+    }
+    .swiper-slide {
+        padding: 0;
+        width: 609px !important;
+        height: 472px !important;
+    }
+    .swiper-slide-active {
+        transform: none !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .relax {
+        padding: 40px 0 34px;
+    }
+    .relax-swiper {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .swiper-slide {
+        width: 280px !important;
+        height: 180px !important;
+    }
+}
+
+
+
+
+@media(max-width: 767px) {
+    .event__wrapper,
+    .food__wrapper {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .event-descr,
+    .food-descr,
+    .food-title {
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .event-descr,
+    .food-descr {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .food-descr {
+        margin-top: 16px;
     }
 }

@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const relaxSwiper = new Swiper('.relax-swiper', {
+        loop: true,     
+        slidesPerView: 'auto',
+        spaceBetween: 26,
+        speed: 700,
+        breakpoints: {
+            1440: {
+                centeredSlides: true,
+                slidesPerView: 3,
+                spaceBetween: 160,
+            }
+        }
+    });
+});
+
 function playVideo() {
     const playBtns = document.querySelectorAll('.video-play')
 
@@ -16,7 +32,9 @@ function playVideo() {
     })
 }
 
-playVideo()
+try {
+    playVideo()
+} catch {}
 
 function mobileMenu() {
     const openBtn = document.querySelector('.menu-btn.open')
