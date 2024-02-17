@@ -2417,6 +2417,9 @@ li.header-item.dropdown > a:hover + .sub__list,
         padding-left: 20px;
         gap: 10px;
     }
+    .event__content {
+        gap: 28px;
+    }
 }
 
 /* FOOD SECTION */
@@ -2501,6 +2504,9 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .food-img {
         border-radius: 0;
+    }
+    .food__wrapper {
+        gap: 28px;
     }
 }
 
