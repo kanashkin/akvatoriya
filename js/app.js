@@ -1,19 +1,21 @@
 function playVideo() {
     const playBtns = document.querySelectorAll('.video-play')
 
-    playBtns.forEach(function(btn) {
-        const video = btn.nextElementSibling
-
-        btn.addEventListener('click', function() {
-            video.play()
-            btn.classList.add('unactive')
+    if (playBtns) {
+        playBtns.forEach(function(btn) {
+            const video = btn.nextElementSibling
+    
+            btn.addEventListener('click', function() {
+                video.play()
+                btn.classList.add('unactive')
+            })
+    
+            video.addEventListener('click', function() {
+                video.pause()
+                btn.classList.remove('unactive')
+            })
         })
-
-        video.addEventListener('click', function() {
-            video.pause()
-            btn.classList.remove('unactive')
-        })
-    })
+    }
 }
 
 function mobileMenu() {
@@ -28,6 +30,24 @@ function mobileMenu() {
     closeBtn.addEventListener('click', function() {
         menu.classList.remove('active')
     })
+}
+
+function openPopup() {
+    const openTriggers = document.querySelectorAll('.open-popup')
+    const closeTrigger = document.querySelector('.hide-popup')
+    const popup = document.querySelector('.overlay')
+
+    if (openTriggers && closeTrigger && popup) {
+        openTriggers.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                popup.classList.add('active')
+            })
+        })
+
+        closeTrigger.addEventListener('click', function() {
+            popup.classList.remove('active')
+        })
+    }
 }
 
 
@@ -48,12 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } catch {}
 
-    try {
-        playVideo()
-    } catch {}
-
+    playVideo()
     mobileMenu()
-    
+    openPopup()
 });
 
 (function ($) {
