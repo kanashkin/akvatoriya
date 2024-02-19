@@ -2780,6 +2780,36 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
 }
 
+@media(max-width: 767px) {
+    .book {
+        margin-top: 32px;
+    }
+    .book__input-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .book__form__items {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .book__input__wrapper {
+        width: 100%;
+    }
+    .time-input-before {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .book__inputs {
+        gap: 8px;
+    }
+    .book__form .page__form-accept {
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
+
 
 /* ITEMS SECTIONS */
 
@@ -2902,6 +2932,39 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
 }
 
+@media(max-width: 767px) {
+    .menu {
+        padding: 52px 0;
+    }
+    .items__wrapper {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .item {
+        position: relative;
+        height: 140px;
+    }
+    .item__photo {
+        position: static;
+        width: 37.5%;
+    }
+    .item__photo-img {
+        height: 100%;
+    }
+    .item__name {
+        border-radius: 0 30px 0 0;
+        height: 100%;
+        width: 62.5%;
+    }
+    .item__photo-btn {
+        margin-top: 0;
+        max-width: 100%;
+    }
+    .items__list {
+        gap: 64px;
+    }
+}
+
 /* MENU__CARD */
 
 .overlay {
@@ -2977,10 +3040,19 @@ li.header-item.dropdown > a:hover + .sub__list,
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu__item-name {
     max-width: 95%;
+}
+
+.menu__card__wrapper .item__info-text {
+    display: none;
+}
+
+.popup .book {
+    display: none;
 }
 
 @media(max-width: 1800px) {
@@ -3054,7 +3126,51 @@ li.header-item.dropdown > a:hover + .sub__list,
     .menu__item-name {
         max-width: 70%;
     }
+    .popup .book {
+        display: block;
+    }
     .popup .book__wrapper {
         max-width: 638px;
+    }
+}
+
+@media(max-width: 767px) {
+    .popup .book {
+        display: none;
+    }
+    .menu__card__wrapper {
+        margin-top: 40px;
+        padding-bottom: 0;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .menu__card {
+        padding-bottom: 32px;
+    }
+    .popup .item {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+    .popup .item__photo-img {
+        border-radius: 30px;
+    }
+    .menu__card__wrapper .item__info-text {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .menu__items {
+        margin-top: 16px;
+        gap: 16px;
+    }
+    .menu__items-name {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .menu__item {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .menu__item-name {
+        max-width: 88%;
     }
 }
