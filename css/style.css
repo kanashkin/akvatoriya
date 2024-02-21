@@ -3855,4 +3855,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     .buy__card {
         padding-bottom: 32px;
     }
+    .buy-accept {
+        max-width: 100%;
+    }
 }
