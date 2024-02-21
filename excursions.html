@@ -438,8 +438,14 @@
         </section>
     </main>
 
-    <div class="overlay active">
+    <div class="overlay">
         <div class="buy__card popup">
+            <div class="header__wrapper">
+                <a class="logo" href="index.html">
+                    <img src="img/header/logo.png" alt="">
+                </a>
+                <button class="hide-popup mobile">назад</button>
+            </div>
             <div class="items__list-item item">
                 <div class="item__photo">
                     <img class="item__photo-img" src="img/items/vessels/01.png" alt="">
@@ -484,7 +490,7 @@
                     </div>
                 </div>
                 <form class="buy__form" action="">
-                    <div class="page__form-title gold">Купить билеты</div>
+                    <p class="page__form-title gold">Купить билеты</p>
                     <div class="buy__form-peoples">
                         <div class="people__input__wrapper">
                             <div class="buy__form-text">взрослый</div>
@@ -494,6 +500,59 @@
                                 <button type="button" class="people__input-plus"></button>
                             </div>
                         </div>
+                        <div class="people__input__wrapper">
+                            <div class="buy__form-text">детский</div>
+                            <div class="people__input">
+                                <button type="button" class="people__input-minus"></button>
+                                <input type="text" class="people-input buy__form-text" value="0">
+                                <button type="button" class="people__input-plus"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="buy__form-dates">
+                            <div class="buy__input__wrapper">
+                                <div class="buy__form-text mb">Дата мероприятия</div>
+                                <input class="page-input border" type="text" placeholder="дд.мм.гг">
+                            </div>
+                            <div class="buy__input__date buy__date">
+                                <div class="buy__date-value">20.01</div>
+                                <div class="buy__date-day">сегодня</div>
+                            </div>
+                            <div class="buy__input__date buy__date">
+                                <div class="buy__date-value">21.01</div>
+                                <div class="buy__date-day">завтра</div>
+                            </div>
+                            <div class="buy__input__date buy__date">
+                                <div class="buy__date-value">22.01</div>
+                                <div class="buy__date-day">понедельник</div>
+                            </div>
+                        </div>
+                        <div class="buy__form-times buy__times">
+                            <div class="buy__form-text mb">Время аренды</div>
+                            <div class="buy__times__block">
+                                <input class="page-input border" type="text" placeholder="--:--">
+                                <div class="buy__date">10:00</div>
+                                <div class="buy__date">13:30</div>
+                                <div class="buy__date">15:00</div>
+                                <div class="buy__date">17:00</div>
+                                <div class="buy__date">18:30</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="buy__form-info buy__info">
+                            <a class="buy__info-rules gold-light" href="">Правила возврата билетов</a>
+                            <div class="buy__info-total gold">Всего к оплате</div>
+                            <div class="but__info-total_value gold">650 ₽</div>
+                        </div>
+                        <div class="buy__form-inputs">
+                            <input class="page-input" type="text" placeholder="Ваше имя">
+                            <input class="page-input phone-input" type="text" placeholder="+7(999)678-4523">
+                            <input class="page-input" type="email" placeholder="e-mail">
+                            <button class="click-btn gold-btn">купить</button>
+                        </div>
+                        <p class="page__form-accept gold buy-accept">Нажимая кнопку, Вы даёте согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</p>
                     </div>
                 </form>
             </div>
