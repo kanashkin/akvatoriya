@@ -50,6 +50,29 @@ function openPopup() {
     }
 }
 
+function selectPeoples() {
+    const inputBtns = document.querySelectorAll('.people__input button')
+
+    if (inputBtns) {
+        inputBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                let currentInput = btn.closest('.people__input').querySelector('input')
+                let currentValue = parseInt(currentInput.value)
+    
+                if (btn.classList.contains('people__input-minus')) {
+                    if(currentValue > 0) {
+                        currentValue -= 1
+                    }
+                } else {
+                    currentValue += 1
+                }
+
+                currentInput.value = currentValue
+            })
+        })
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     try {
@@ -71,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     playVideo()
     mobileMenu()
     openPopup()
+    selectPeoples()
 });
 
 (function ($) {

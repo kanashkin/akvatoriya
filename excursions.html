@@ -306,7 +306,10 @@
                         </div>
                         <div class="item__name">
                             <h2 class="item__name-title vessel__card-name">ПАРАДНЫЙ ПЕТЕРБУРГ С ВЫХОДОМ В ФИНСКИЙ ЗАЛИВ</h2>
-                            <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                            <div class="item-name-info">
+                                <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                                <span class="vessel__card-price gold time">1 час 30 минут</span>
+                            </div>
                         </div>
                         <div class="item__info">
                             <p class="item__info-text">
@@ -325,13 +328,15 @@
                         </div>
                         <div class="item__name">
                             <h2 class="item__name-title vessel__card-name">ВИДЫ СЕВЕРНОЙ СТОЛИЦЫ</h2>
-                            <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                            <div class="item-name-info">
+                                <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                                <span class="vessel__card-price gold time">1 час 45 минут</span>
+                            </div>
                         </div>
                         <div class="item__info">
                             <p class="item__info-text">
                                 Увлекательная, интересная, дневная экскурсия с аудиогидом, которая познакомит вас с самыми знаменитыми достопримечательностями Санкт-Петербурга.
                             </p>
-                            <span class="vessel__card-price gold time">1 час 45 минут</span>
                         </div>
                     </li>
                     <li class="items__list-item item">
@@ -341,13 +346,15 @@
                         </div>
                         <div class="item__name">
                             <h2 class="item__name-title vessel__card-name">НОЧЬ РАЗВОДНЫХ МОСТОВ</h2>
-                            <span class="vessel__card-price gold">от 700 <span class="roboto">₽</span>/чел</span>
+                            <div class="item-name-info">
+                                <span class="vessel__card-price gold">от 700 <span class="roboto">₽</span>/чел</span>
+                                <span class="vessel__card-price gold time">2 часа 50 минут</span>
+                            </div>
                         </div>
                         <div class="item__info">
                             <p class="item__info-text">
                                 Гостите или живете в Санкт-Петербурге и не видели развод мостов? Такого просто не может быть! Приглашаем вас на ночной дискотечный круиз на двухпалубном теплоходе в сопровождении музыкантов, с которого вы сможете любоваться разведением самых знаменитых мостов города. 
                             </p>
-                            <span class="vessel__card-price gold time">2 часа 50 минут</span>
                         </div>
                     </li>
                     <li class="items__list-item item">
@@ -357,13 +364,15 @@
                         </div>
                         <div class="item__name">
                             <h2 class="item__name-title vessel__card-name">ВИДЫ РАЗВОДНЫХ МОСТОВ</h2>
-                            <span class="vessel__card-price gold">от 700 <span class="roboto">₽</span>/чел</span>
+                            <div class="item-name-info">
+                                <span class="vessel__card-price gold">от 700 <span class="roboto">₽</span>/чел</span>
+                                <span class="vessel__card-price gold time">2 часа 15 минут</span>
+                            </div>
                         </div>
                         <div class="item__info">
                             <p class="item__info-text">
                                 По водной глади Невы вы пройдете под Дворцовым, Троицким и Литейным мостами – одними из самых красивых в городе. А наш аудиогид подробно и интересно расскажет о каждом знаковом сооружении, которое вы встретите во время водного круиза.
                             </p>
-                            <span class="vessel__card-price gold time">2 часа 15 минут</span>
                         </div>
                     </li>
                 </ul>
@@ -438,7 +447,7 @@
         </section>
     </main>
 
-    <div class="overlay">
+    <div class="overlay active">
         <div class="buy__card popup">
             <div class="header__wrapper">
                 <a class="logo" href="index.html">
@@ -449,11 +458,13 @@
             <div class="items__list-item item">
                 <div class="item__photo">
                     <img class="item__photo-img" src="img/items/vessels/01.png" alt="">
-                    <button class="item__photo-btn vessel__card-btn hide-popup">свернуть</button>
                 </div>
                 <div class="item__name">
                     <h2 class="item__name-title vessel__card-name">ПАРАДНЫЙ ПЕТЕРБУРГ С ВЫХОДОМ В ФИНСКИЙ ЗАЛИВ</h2>
-                    <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                    <div class="item-name-info">
+                        <span class="vessel__card-price gold">от 400 <span class="roboto">₽</span>/чел</span>
+                        <span class="vessel__card-price gold time">1 час 30 минут</span>
+                    </div>
                 </div>
                 <div class="item__info">
                     <p class="item__info-text">
@@ -496,7 +507,7 @@
                             <div class="buy__form-text">взрослый</div>
                             <div class="people__input">
                                 <button type="button" class="people__input-minus"></button>
-                                <input type="text" class="people-input buy__form-text" value="1">
+                                <input type="text" class="people-input buy__form-text" value="1" readonly>
                                 <button type="button" class="people__input-plus"></button>
                             </div>
                         </div>
@@ -504,7 +515,7 @@
                             <div class="buy__form-text">детский</div>
                             <div class="people__input">
                                 <button type="button" class="people__input-minus"></button>
-                                <input type="text" class="people-input buy__form-text" value="0">
+                                <input type="text" class="people-input buy__form-text" value="0" readonly>
                                 <button type="button" class="people__input-plus"></button>
                             </div>
                         </div>
@@ -529,9 +540,11 @@
                             </div>
                         </div>
                         <div class="buy__form-times buy__times">
-                            <div class="buy__form-text mb">Время аренды</div>
-                            <div class="buy__times__block">
+                            <div class="buy__input__wrapper">
+                                <div class="buy__form-text mb">Время аренды</div>
                                 <input class="page-input border" type="text" placeholder="--:--">
+                            </div>
+                            <div class="times__items">
                                 <div class="buy__date">10:00</div>
                                 <div class="buy__date">13:30</div>
                                 <div class="buy__date">15:00</div>
@@ -543,8 +556,10 @@
                     <div>
                         <div class="buy__form-info buy__info">
                             <a class="buy__info-rules gold-light" href="">Правила возврата билетов</a>
-                            <div class="buy__info-total gold">Всего к оплате</div>
-                            <div class="but__info-total_value gold">650 ₽</div>
+                            <div class="buy__info__divs">
+                                <div class="buy__info-total gold">Всего к оплате</div>
+                                <div class="but__info-total_value gold">650 ₽</div>
+                            </div>
                         </div>
                         <div class="buy__form-inputs">
                             <input class="page-input" type="text" placeholder="Ваше имя">

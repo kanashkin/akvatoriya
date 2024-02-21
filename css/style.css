@@ -503,6 +503,7 @@ body {
 .header {
     z-index: 5;
     position: absolute;
+    top: 0;
     padding: 18px 45px;
     width: 100%;
 }
@@ -3334,6 +3335,10 @@ li.header-item.dropdown > a:hover + .sub__list,
     line-height: 56px;
 }
 
+.item-name-info .time {
+    display: none;
+}
+
 @media(max-width: 1800px) {
     .excursions-page {
         padding: 70px 0 80px;
@@ -3363,7 +3368,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     .excursions-page .items__wrapper {
         margin-top: 76px;
     }
-    .excursions-page .item {
+    .excursions-page__wrapper .item {
         position: relative;
         flex-wrap: wrap;
     }
@@ -3381,7 +3386,7 @@ li.header-item.dropdown > a:hover + .sub__list,
         width: 28px;
         height: 28px;
     }
-    .excursions-page .item__photo {
+    .excursions-page__wrapper .item__photo {
         position: static;
     }
     .excursions-page .item__photo-img {
@@ -3413,6 +3418,61 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .excursions-page .items__list {
         gap: 136px;
+    }
+}
+
+@media(max-width: 767px) {
+    .excursions-page__wrapper .how__texts {
+        padding-bottom: 0;
+    }
+    .excursions-page {
+        padding: 50px 0 32px;
+    }
+    .excursions-page .items__wrapper {
+        margin-top: 32px;
+    }
+    .excursions-page__wrapper .item {
+        height: auto;
+        flex-direction: column;
+    }
+    .excursions-page__wrapper .item__info {
+        display: none;
+    }
+    .excursions-page__wrapper .item__photo-img {
+        margin-top: 0;
+    }
+    .excursions-page__wrapper .item__photo {
+        width: 100%;
+        background: none;
+    }
+    .excursions-page__wrapper .item__name {
+        padding: 16px;
+        width: 100%;
+        border-radius: 0;
+    }
+    .excursions-page__wrapper .item__photo-btn {
+        width: 100%;
+    }
+    .item-name-info {
+        width: 100%;
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item-name-info .vessel__card-price {
+        margin-top: 0;
+    }
+    .item-name-info .time {
+        display: flex;
+        gap: 8px;
+    }
+    .excursions-page__wrapper .vessel__card-price.time::before {
+        width: 16px;
+        height: 16px;
+    }
+    .excursions-page .items__list {
+        gap: 64px;
     }
 }
 
@@ -3502,12 +3562,16 @@ li.header-item.dropdown > a:hover + .sub__list,
 
 .buy__times {
     margin-top: 74px;
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
 }
 
-.buy__times__block {
+.times__items {
     display: flex;
     align-items: center;
     gap: 32px;
+    padding-bottom: 16px;
 }
 
 .buy__times .page-input {
@@ -3541,6 +3605,12 @@ li.header-item.dropdown > a:hover + .sub__list,
 
 .buy-accept {
     margin: 20px 0 0 auto;
+}
+
+.buy__info__divs {
+    display: inherit;
+    align-items: inherit;
+    gap: inherit;
 }
 
 @media(max-width: 1800px) {
@@ -3640,7 +3710,7 @@ li.header-item.dropdown > a:hover + .sub__list,
         flex-wrap: wrap;
         row-gap: 40px;
     }
-    .buy__input__wrapper {
+    .buy__form-dates .buy__input__wrapper {
         width: 100%;
     }
     .buy__input__wrapper input {
@@ -3675,5 +3745,114 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .buy__card {
         padding-bottom: 43px;
+    }
+}
+
+@media(max-width: 767px) {
+    .buy__card .item {
+        display: flex;
+    }
+    .buy__card__wrapper {
+        margin-top: 20px;
+        gap: 12px;
+    }
+    .buy__card-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .buy__card-descr {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .buy__card__info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .buy__ingo-img {
+        max-width: 100%;
+        height: auto;
+    }
+    .buy__peoples {
+        flex-direction: row;
+    }
+    .buy__peoples-price,
+    .buy__peoples-type {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .buy__peoples-age {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .buy__card .berth {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+    .buy__info__block {
+        padding-left: 12px;
+    }
+    .buy__form {
+        gap: 32px;
+        padding: 0 20px 0 12px;
+    }
+    .buy__form-peoples {
+        gap: 20px;
+        flex-direction: column;
+        padding: 0;
+    }
+    .people__input button {
+        width: 18px;
+        height: 18px;
+    }
+    .people__input {
+        padding: 7px 8px;
+    }
+    .people-input {
+        font-size: 16px;
+        line-height: 100%;
+        width: 37px;
+    }
+    .buy__form-text,
+    .buy__date {
+        font-size: 16px;
+    }
+    .buy__form-text.mb {
+        margin-bottom: 12px;
+    }
+    .buy__input__wrapper input {
+        width: 187px;
+    }
+    .buy__form-dates {
+        row-gap: 20px;
+        column-gap: 28px;
+    }
+    .buy__times .page-input {
+        margin: 10px 0;
+        width: 106px;
+    }
+    .times__items {
+        padding-bottom: 0;
+        column-gap: 20px;
+        row-gap: 28px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .buy__info {
+        padding: 0;
+        font-size: 16px;
+        gap: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+    }
+    .buy__form-inputs {
+        flex-direction: column;
+    }
+    .buy__form-inputs input {
+        width: 100% !important;
+    }
+    .buy__card {
+        padding-bottom: 32px;
     }
 }
