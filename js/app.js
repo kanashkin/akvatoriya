@@ -73,6 +73,36 @@ function selectPeoples() {
     }
 }
 
+function rentalSort() {
+    const sortType = document.querySelectorAll('.sort-type__item')
+    const visualArrows = document.querySelector('.page-sort__visual')
+
+    sortType.forEach(function(item) {
+        item.addEventListener('click', function() {
+            sortType.forEach(function(item) {
+                item.classList.remove('active')
+            })
+
+            item.classList.add('active')
+        })
+    })
+
+    visualArrows.addEventListener('click', function() {
+        const arrowItems = visualArrows.querySelectorAll('svg')
+        let currentArrow
+
+        arrowItems.forEach(function(arrow) {
+            if (! arrow.classList.contains('active')) {
+                currentArrow = arrow
+            }
+
+            arrow.classList.remove('active')
+        })
+
+        currentArrow.classList.add('active')
+    })
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     try {
@@ -95,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu()
     openPopup()
     selectPeoples()
+    rentalSort()
 });
 
 (function ($) {

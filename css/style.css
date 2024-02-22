@@ -276,6 +276,7 @@ body {
     font-weight: 300;
     line-height: 56px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .vessel__card-price {
@@ -536,6 +537,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 .sub__list:hover {
     z-index: 2;
     opacity: 1;
+    visibility: visible;
 }
 
 .nav {
@@ -577,6 +579,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     display: flex;
     gap: 64px;
     z-index: -1;
+    visibility: hidden;
     opacity: 0;
     transition: .3s all;
 }
@@ -4197,5 +4200,204 @@ li.header-item.dropdown > a:hover + .sub__list,
     }
     .actions-page__wrapper .relax {
         padding-top: 100px;
+    }
+}
+
+/* RENTAL PAGES */
+
+.rental-page__wrapper .select-form {
+    margin: 150px 0 80px;
+}
+
+.page__form-section {
+    max-width: 1687px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.page__form-question {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Klik';
+    font-weight: 300;
+}
+
+.question-title,
+.question-input__title {
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.question__input-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.question__input-warning {
+    padding-left: 20px;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.rental-page {
+    max-width: 100%;
+    padding: 0 70px;
+    padding-top: 145px;
+}
+
+.rental-page__header {
+    width: fit-content;
+    margin: 60px 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-sort {
+    padding: 13px 32px 13px 0;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    line-height: 100%;
+    font-family: 'Klik';
+}
+
+.page-sort__title {
+    white-space: nowrap;
+}
+
+.page-sort__type {
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+}
+
+.page-sort__type:hover .sort-type__item {
+    visibility: visible;
+    z-index: 1;
+}
+
+.sort-type__item {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.sort-type__item.active {
+    visibility: visible;
+    z-index: 1;
+    position: static;
+}
+
+.page-sort__visual {
+    cursor: pointer;
+    padding: 0 9px 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-sort__visual svg.active path {
+    stroke: #E0CFAE;
+}
+
+.rental-search {
+    opacity: .6;
+    text-align: center;
+    border: 2px solid rgba(224, 207, 174, 1);
+    padding: 15.5px 50px;
+    border-radius: 18px;
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 100%;
+    color: rgba(224, 207, 174, 1);
+}
+
+.rental-search::placeholder {
+    color: rgba(224, 207, 174, 1);
+}
+
+.rental__items {
+    margin-top: 64px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 400px);
+    gap: 60px;
+}
+
+@media(max-width: 1800px) {
+    .rental-page {
+        padding: 0 60px;
+        padding-top: 145px;
+    }
+    .rental-page__header {
+        margin-top: 68px;
+    }
+    .page-sort {
+        font-size: 32px;
+    }
+    .rental__items {
+        grid-template-columns: repeat(3, 400px);
+    }
+    .rental-search {
+        font-size: 32px;
+        padding: 19.5px 42px;
+    }
+    .question-title, .question-input__title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .question__input-warning {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .rental-page {
+        padding: 0 44px;
+        padding-top: 135px;
+    }
+    .rental__items {
+        gap: 40px;
+        grid-template-columns: repeat(2, 320px);
+    }
+    .rental__items .vessel__card {
+        width: 320px;
+    }
+    .rental-page__wrapper .select-form {
+        margin: 120px 0 40px;
+    }
+    .page-sort {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .rental-page__header {
+        gap: 16px;
+    }
+    .rental-search {
+        padding: 12px 45px;
+        font-size: 24px;
+        line-height: 32px;
+        border-radius: 12px;
+    }
+    .question-title, .question-input__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .question__input-warning {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 767px) {
+    .rental-page {
+        padding-top: 84px;
     }
 }
