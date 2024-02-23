@@ -124,7 +124,18 @@ function selectVesselImage() {
 
 }
 
+function popupForm() {
+    const openTriggers = document.querySelectorAll('.popup-form-open')
+    const form = document.querySelector('.popup-overlay')
 
+    if (openTriggers) {
+        openTriggers.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                form.classList.add('active')
+            })
+        })
+    }
+}
 document.addEventListener('DOMContentLoaded', function() {
     try {
         const relaxSwiper = new Swiper('.relax-swiper', {
@@ -148,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     selectPeoples()
     rentalSort()
     selectVesselImage()
+    popupForm()
 });
 
 (function ($) {
