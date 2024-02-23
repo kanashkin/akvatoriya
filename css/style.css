@@ -4652,3 +4652,181 @@ li.header-item.dropdown > a:hover + .sub__list,
 .yacht-rental__wrapper .select-form {
     margin: 80px 0 120px;
 }
+
+.price__table {
+    width: fit-content;
+    margin: 80px auto;
+    background: #fff;
+    border-radius: 30px;
+    padding: 58px 54px 39px 36px;
+    font-family: 'Klik';
+}
+
+.price__table__wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.price__table-title {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 100%;
+    text-align: center;
+    padding-left: 39px;
+}
+
+.price__table__times {
+    margin-top: 23px;
+    display: flex;
+}
+
+.price__day {
+    padding-bottom: 17px;
+    padding-right: 23px;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+}
+
+.price__night {
+    padding-left: 23px;
+    padding-bottom: 17px;
+}
+
+.price-item.week {
+    margin-top: 44px;
+}
+
+.price-item.weekend {
+    margin-top: 50px;
+}
+
+.price__table__times img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.sun {
+    margin: 0 0 0 auto;
+}
+
+.price-item { 
+    height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 100%;
+    color: rgba(5, 0, 9, 1);
+    display: flex;
+    align-items: center;
+}
+
+.price-item.before::before {
+    margin-right: 16px;
+    font-family: 'Klik';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    width: 23px;
+}
+
+.light .price-item.before::before {
+    color: rgba(224, 207, 174, 1);
+}
+.high .price-item.before::before {
+    color: rgba(173, 147, 97, 1);
+}
+.white .price-item.before::before {
+    color: rgba(37, 28, 100, 1);
+}
+
+.blue {
+    color: rgba(37, 28, 100, 1);
+}
+
+.price-item.week.before::before {
+    content: 'пн чт';
+}
+
+.price-item.weekend.before::before {
+    content: 'пт вс';
+}
+
+.price__table-dates {
+    text-align: center;
+    padding-left: 39px;
+    margin-top: 26px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.night-time {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 100%;
+    color: rgba(5, 0, 9, 1);
+    margin-top: 40px;
+    padding-left: 45px;
+}
+
+@media(max-width: 1439px) {
+    .price__table {
+        width: 100%;
+        padding: 58px 38px 38px 24px;
+        margin: 60px auto;
+    }
+    .price__table__wrapper {
+        justify-content: space-between;
+    }
+    .price__table-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .price-item {
+        height: 36px;
+        font-size: 20px;
+    }
+    .price-item.before::before {
+        margin-right: 4px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .price__day {
+        padding-right: 16px;
+    }
+    .price__night {
+        padding-left: 16px;
+    }
+    .price__table-dates,
+    .price__table-title {
+        padding-left: 10px;
+    }
+    .price__table-dates {
+        margin-top: 16px;
+    }
+    .night-time {
+        font-size: 20px;
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .price__table {
+        padding: 32px 27px;
+    }
+    .price__table__wrapper {
+        flex-direction: column;
+    }
+    .price__table__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .price__table-dates, .price__table-title {
+        padding-left: 20px;
+    }
+    .vessel__furniture {
+        gap: 40px;
+    }
+}
