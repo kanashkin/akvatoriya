@@ -112,7 +112,7 @@ function selectVesselImage() {
     
     selectItems.forEach(function(item) {
         item.addEventListener('click', function() {
-            const currentItem = document.querySelector('.vessel__current-photo')
+            const currentItem = item.closest('.vessel__item-visual').querySelector('.vessel__current-photo')
 
             let currentUrl = currentItem.getAttribute('src')
             let selectUrl = item.getAttribute('src')

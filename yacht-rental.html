@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акватория | Four Winns 240</title>
+    <title>Акватория | Аренда катеров</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -277,62 +277,197 @@
         </div>
     </header>
 
-    <main class="vessel-page__wrapper">
+    <main class="rental-page__wrapper yacht-rental__wrapper">
         <img class="kater-bg" src="img/kater-big.png" alt="">
 
-        <section class="vessel-page">
-            <h1 class="title">акции</h1>
-            <div class="vessel__item-wrapper container">
-                <div class="vessel__item-visual">
-                    <img class="vessel__current-photo" src="img/vessels/kater-page/01.png" alt="">
-                    <div class="vessel__item__photos">
-                        <img class="vessel__item-photo" src="img/vessels/kater-page/02.png" alt="">
-                        <img class="vessel__item-photo" src="img/vessels/kater-page/03.png" alt="">
-                        <img class="vessel__item-photo" src="img/vessels/kater-page/04.png" alt="">
-                        <img class="vessel__item-photo" src="img/vessels/kater-page/05.png" alt="">
+        <section class="rental-page">
+            <h1 class="title">Аренда катеров</h1>
+            <div class="rental-page__header">
+                <div class="rental-page__sort page-sort">
+                    <div class="page-sort__title gold-light">сортировать по</div>
+                    <div class="page-sort__type gold">
+                        <div class="sort-type__item active">цене</div>
+                        <div class="sort-type__item">вместимости</div>
+                    </div>
+                    <div class="page-sort__visual">
+                        <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.25 15.75L4.75 19.25M4.75 19.25L1.25 15.75M4.75 19.25V1.75" stroke="#AD9361" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="active" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.75 5.25L5.25 1.75M5.25 1.75L8.75 5.25M5.25 1.75V19.25" stroke="#AD9361" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                 </div>
-                <div class="vessel__item-info">
-                    <div class="vessel__item-title__wrapper">
-                        <div class="title vessel__item-title gold">Four Winns 240</div>
-                        <div class="vessel__item-capacity">6</div>
+                <input class="rental-search" type="text" placeholder="поиск по названию">
+            </div>
+            <div class="rental__items">
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/azimut-55.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">12</span>
+                        </div>
                     </div>
-                    <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
-                    <p class="vessel__item-descr">
-                        7-ми метровый катер, способный развить скорость в 70 км/ч. Незабываемые эмоции от полета по водной глади дополнятся удивительными фотографиями на фоне красивейших мест Санкт-Петербурга. <br> <br>
-                        На Four Winns 240 можно отправиться провожать закат в Финский залив, посмотреть с лучшего ракурса развод мостов, буквально дотронутся до легендарной «Авроры» и насладится видами залива, а также найти множество других приключений. <br> <br>
-                        Аренда этого катера идеальна для прогулки вдвоем или в компании до 7 человек. При необходимости опытный капитан встретит вас на удобном причале, а на обратном пути высадит там, где вам захочется продолжить путешествие. 
-                    </p>
-                    <div class="berth gold">Причал: канал Грибоедова, 68</div>
-                    <div class="book__wrapper">
-                        <form class="book__form" action="">
-                            <h2 class="page__form-title gold">Забронировать судно</h2>
-                            <div class="book__form__items">
-                                <div class="book__input__wrapper">
-                                    <div class="book__input-title">Дата</div>
-                                    <input class="page-input date-input" type="text" placeholder="дд.мм.гг">
-                                </div>
-                                <div class="book__input__wrapper">
-                                    <div class="book__input-title">Время аренды</div>
-                                    <div class="book__inputs">
-                                        <span class="time-input-before">от</span>
-                                        <input class="page-input time-input from" type="text" placeholder="--:--">
-                                        <span class="time-input-before">до</span>
-                                        <input class="page-input time-input to" type="text" placeholder="--:--">
-                                    </div>
-                                </div>
-                                <input type="text" class="page-input" placeholder="Ваше имя">
-                                <input type="text" class="page-input phone-input" placeholder="+7(999)678-4523">
-                                <input type="text" class="page-input" placeholder="e-mail">
-                                <button type="submit" class="click-btn gold-btn">отправить</button>
-                            </div>
-                            <div class="form-catering">
-                                <input class="calc-input" type="checkbox">
-                                <span class="form-catering__title gold">кейтеринг от нашей компании</span>
-                            </div>
-                            <p class="page__form-accept gold">Нажимая кнопку, Вы даёте согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</p>
-                        </form>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">AZIMUT 55</h3>
+                        <span class="vessel__card-price gold">от 25000 <span class="roboto">₽</span>/час</span>
                     </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/dominator-68.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">15</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">DOMINATOR 68</h3>
+                        <span class="vessel__card-price gold">от 35000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/saint-mitrofan.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">16</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">СВЯТОЙ МИТРОФАН</h3>
+                        <span class="vessel__card-price gold">от 30000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/azimut-55.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">12</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">AZIMUT 55</h3>
+                        <span class="vessel__card-price gold">от 25000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/dominator-68.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">15</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">DOMINATOR 68</h3>
+                        <span class="vessel__card-price gold">от 35000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/saint-mitrofan.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">16</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">СВЯТОЙ МИТРОФАН</h3>
+                        <span class="vessel__card-price gold">от 30000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/azimut-55.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">12</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">AZIMUT 55</h3>
+                        <span class="vessel__card-price gold">от 25000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/dominator-68.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">15</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">DOMINATOR 68</h3>
+                        <span class="vessel__card-price gold">от 35000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/saint-mitrofan.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">16</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">СВЯТОЙ МИТРОФАН</h3>
+                        <span class="vessel__card-price gold">от 30000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/azimut-55.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">12</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">AZIMUT 55</h3>
+                        <span class="vessel__card-price gold">от 25000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/dominator-68.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">15</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">DOMINATOR 68</h3>
+                        <span class="vessel__card-price gold">от 35000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/saint-mitrofan.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">16</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">СВЯТОЙ МИТРОФАН</h3>
+                        <span class="vessel__card-price gold">от 30000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="yacht-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
             </div>
         </section>
@@ -359,6 +494,32 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="page__form-section">
+            <form class="page__form select-form">
+                <h3 class="page__form-title gold">Оставить заявку</h3>
+                <p class="page__form-accept gold">Нажимая кнопку, Вы даёте согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности.</p>
+                <div class="page__form-inputs">
+                    <input class="page-input" type="text" placeholder="Ваше имя">
+                    <input class="page-input phone-input" type="text" placeholder="+7(999)678-4523">
+                    <input class="page-input" type="email" placeholder="e-mail">
+                    <button type="submit" class="click-btn gold-btn">рассчитать</button>
+                </div>
+                <div class="page__form-question">
+                    <div class="question-title gold">Вопрос*</div>
+                    <div class="question__inputs">
+                        <div class="question__input-wrapper">
+                            <input class="calc-input" type="radio" name="form-question" required>
+                            <span class="question-input__title gold-light">аренда</span>
+                        </div>
+                        <div class="question__input-wrapper">
+                            <input class="calc-input" type="radio" name="form-question" required>
+                            <span class="question-input__title gold-light">билеты</span>
+                        </div>
+                    </div>
+                    <span class="question__input-warning gold">*обязательное поле</span>
+                </div>
+            </form>
         </section>
         <section class="contacts">
             <div class="contacts__wrapper container">
@@ -429,9 +590,9 @@
         </section>
     </main>
 
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
     <script src="js/app.js"></script>
-    
 </body>
 </html>

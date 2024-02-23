@@ -4002,6 +4002,20 @@ li.header-item.dropdown > a:hover + .sub__list,
     background: url(../img/items-pages/stylya.png) center / contain no-repeat;
 }
 
+.vessel__furniture__item-amount.banket::after {
+    content: '';
+    width: 38px;
+    height: 34px;
+    background: url(../img/items-pages/banket.png) center / contain no-repeat;
+}
+
+.vessel__furniture__item-amount.furshet::after {
+    content: '';
+    width: 13px;
+    height: 34px;
+    background: url(../img/items-pages/furshet.png) center / contain no-repeat;
+}
+
 .vessel__item-descr {
     font-family: 'Klik';
     color: #fff;
@@ -4164,6 +4178,18 @@ li.header-item.dropdown > a:hover + .sub__list,
         width: 20px;
         height: 26px;
     }
+    .vessel__furniture__item-amount.banket::after {
+        content: '';
+        width: 31px;
+        height: 28px;
+        background: url(../img/items-pages/banket.png) center / contain no-repeat;
+    }
+    .vessel__furniture__item-amount.furshet::after {
+        content: '';
+        width: 10px;
+        height: 28px;
+        background: url(../img/items-pages/furshet.png) center / contain no-repeat;
+    }
     .vessel__item-descr {
         font-size: 20px;
         line-height: 28px;
@@ -4246,6 +4272,19 @@ li.header-item.dropdown > a:hover + .sub__list,
         width: 12px;
         height: 16px;
     }
+    .vessel__furniture__item-amount.banket::after {
+        content: '';
+        width: 16px;
+        height: 14px;
+        background: url(../img/items-pages/banket.png) center / contain no-repeat;
+    }
+    
+    .vessel__furniture__item-amount.furshet::after {
+        content: '';
+        width: 5px;
+        height: 14px;
+        background: url(../img/items-pages/furshet.png) center / contain no-repeat;
+    }
     .vessel__item-descr {
         font-size: 14px;
         line-height: 20px;
@@ -4278,6 +4317,10 @@ li.header-item.dropdown > a:hover + .sub__list,
 
 .rental-page__wrapper .select-form {
     margin: 150px 0 80px;
+}
+
+.rental-page__wrapper .relax {
+    padding: 120px 0 80px;
 }
 
 .page__form-section {
@@ -4604,4 +4647,8 @@ li.header-item.dropdown > a:hover + .sub__list,
         font-size: 14px;
         line-height: 20px;
     }
+}
+
+.yacht-rental__wrapper .select-form {
+    margin: 80px 0 120px;
 }
