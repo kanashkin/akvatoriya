@@ -297,6 +297,8 @@ body {
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
+    display: block;
+    text-align: center;
 }
 
 .kater-bg {
@@ -482,6 +484,7 @@ body {
         line-height: 32px;
     }
     .page__form-inputs {
+        align-items: center;
         margin-top: 24px;
         flex-direction: column;
     }
@@ -755,6 +758,7 @@ li.header-item.dropdown > a:hover + .sub__list,
         gap: 20px;
         padding-top: 0;
         position: static;
+        visibility: visible;
         opacity: 1;
         z-index: 1;
     }
@@ -2314,10 +2318,16 @@ li.header-item.dropdown > a:hover + .sub__list,
 }
 
 .event-video {
+    height: fit-content;
     width: 42%;
 }
 
-.event-video img {
+.event-video .video-play {
+    width: 36px;
+    height: 36px;
+}
+
+.event-video video {
     border-radius: 30px;
     width: 100%;
 }
@@ -2386,7 +2396,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     .event {
         padding-top: 84px;
     }
-    .event-video img {
+    .event-video video {
         border-radius: 0;
     }
     .event__content {
@@ -3894,9 +3904,17 @@ li.header-item.dropdown > a:hover + .sub__list,
     row-gap: 46px;
 }
 
-.vessel__item-photo {
+.vessel__current-photo {
     max-width: 100%;
-    object-fit: contain;
+    border-radius: 30px;
+}
+
+.vessel__item-photo {
+    cursor: pointer;
+    max-width: 100%;
+    height: 252px;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 .vessel__item-info {
@@ -3914,8 +3932,32 @@ li.header-item.dropdown > a:hover + .sub__list,
     line-height: 100%;
 }
 
+.vessel__item-title__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .vessel__item-title {
     text-align: left;
+}
+
+.vessel__item-capacity {
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 52px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.vessel__item-capacity::after {
+    content: '';
+    width: 44px;
+    height: 44px;
+    background: url(../img/vessels/peoples-after-white.png) center / contain no-repeat;
 }
 
 .vessel__item-info .vessel__card-price {
@@ -4013,6 +4055,9 @@ li.header-item.dropdown > a:hover + .sub__list,
 }
 
 @media(max-width: 1800px) {
+    .vessel__item-title__wrapper .vessel__item-title {
+        max-width: 80%;
+    }
     .vessel__item-wrapper {
         margin-top: 98px;
         max-width: 1333px;
@@ -4054,9 +4099,21 @@ li.header-item.dropdown > a:hover + .sub__list,
     .actions-page__wrapper .relax {
         padding-top: 210px;
     }
+    .vessel__item-photo {
+        width: 182px;
+        height: 208px;
+    }
 }
 
 @media(max-width: 1439px) {
+    .vessel__item-capacity {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .vessel__item-capacity::after {
+        width: 28px;
+        height: 28px;
+    }
     .vessel__item-wrapper {
         flex-direction: column;
         align-items: center;
@@ -4130,6 +4187,21 @@ li.header-item.dropdown > a:hover + .sub__list,
 }
 
 @media(max-width: 767px) {
+    .vessel__item-capacity {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .vessel__item-capacity::after {
+        width: 16px;
+        height: 16px;
+    }
+    .vessel-page__wrapper .berth {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .vessel__current-photo {
+        border-radius: 0;
+    }
     .actions-page {
         padding-top: 84px;
     }
@@ -4144,10 +4216,9 @@ li.header-item.dropdown > a:hover + .sub__list,
         gap: 16px;
     }
     .vessel__item-photo {
-        max-width: 84px;
-    }
-    .vessel__item-visual .how-video {
-        border-radius: 0;
+        border-radius: 12px;
+        width: 84px;
+        height: 96px;
     }
     .vessel__item-info {
         margin-top: 100px;
@@ -4332,6 +4403,12 @@ li.header-item.dropdown > a:hover + .sub__list,
     gap: 60px;
 }
 
+.question__inputs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 @media(max-width: 1800px) {
     .rental-page {
         padding: 0 60px;
@@ -4398,6 +4475,133 @@ li.header-item.dropdown > a:hover + .sub__list,
 
 @media(max-width: 767px) {
     .rental-page {
+        padding: 0 20px;
         padding-top: 84px;
+    }
+    .rental-page__header {
+        margin: 0;
+        margin-top: 32px;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        align-items: flex-end;
+    }
+    .page-sort {
+        padding: 18px 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .page-sort__type {
+        padding-left: 12px;
+    }
+    .rental-search {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .rental__items {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .rental__items .vessel__card {
+        width: 100%;
+    }
+    .rental-page__wrapper .select-form {
+        margin: 60px 0 52px;
+    }
+    .page__form-question {
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .question__input-warning {
+        padding-left: 0;
+    }
+    .question__inputs {
+        gap: 16px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .question-title, .question-input__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .page__form-accept {
+        max-width: 90%;
+    }
+}
+
+/* VESSELS PAGES */
+
+.vessel-page {
+    padding-top: 145px;
+}
+
+.vessel-page .book__wrapper {
+    padding-top: 64px;
+}
+
+.vessel-page .book__wrapper .click-btn {
+    grid-row: auto;
+}
+
+.book__wrapper .date-input {
+    margin-top: 0;
+}
+
+.vessel-page .book__form__items {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 36px;
+    row-gap: 40px;
+}
+
+.form-catering {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-catering__title {
+    font-family: 'Klik';
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+@media(max-width: 1800px) {
+    .form-catering__title {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .vessel-page {
+        padding-top: 135px;
+    }
+    .form-catering__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .form-catering {
+        margin-top: 32px;
+    }
+}
+
+@media(max-width: 767px) {
+    .vessel-page {
+        padding-top: 84px;
+    }
+    .vessel-page .book__wrapper {
+        padding-top: 32px;
+    }
+    .form-catering {
+        margin-top: 20px;
+    }
+    .form-catering__title {
+        font-size: 14px;
+        line-height: 20px;
     }
 }

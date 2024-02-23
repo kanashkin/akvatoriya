@@ -77,30 +77,51 @@ function rentalSort() {
     const sortType = document.querySelectorAll('.sort-type__item')
     const visualArrows = document.querySelector('.page-sort__visual')
 
-    sortType.forEach(function(item) {
-        item.addEventListener('click', function() {
-            sortType.forEach(function(item) {
-                item.classList.remove('active')
+    if(sortType) {
+        sortType.forEach(function(item) {
+            item.addEventListener('click', function() {
+                sortType.forEach(function(item) {
+                    item.classList.remove('active')
+                })
+    
+                item.classList.add('active')
             })
+        })
+    }
 
-            item.classList.add('active')
+    if(visualArrows) {
+        visualArrows.addEventListener('click', function() {
+            const arrowItems = visualArrows.querySelectorAll('svg')
+            let currentArrow
+    
+            arrowItems.forEach(function(arrow) {
+                if (! arrow.classList.contains('active')) {
+                    currentArrow = arrow
+                }
+    
+                arrow.classList.remove('active')
+            })
+    
+            currentArrow.classList.add('active')
+        })
+    }
+}
+
+function selectVesselImage() {
+    const selectItems = document.querySelectorAll('.vessel__item-photo')
+    
+    selectItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            const currentItem = document.querySelector('.vessel__current-photo')
+
+            let currentUrl = currentItem.getAttribute('src')
+            let selectUrl = item.getAttribute('src')
+
+            currentItem.setAttribute('src', selectUrl)
+            item.setAttribute('src', currentUrl)
         })
     })
 
-    visualArrows.addEventListener('click', function() {
-        const arrowItems = visualArrows.querySelectorAll('svg')
-        let currentArrow
-
-        arrowItems.forEach(function(arrow) {
-            if (! arrow.classList.contains('active')) {
-                currentArrow = arrow
-            }
-
-            arrow.classList.remove('active')
-        })
-
-        currentArrow.classList.add('active')
-    })
 }
 
 
@@ -126,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     openPopup()
     selectPeoples()
     rentalSort()
+    selectVesselImage()
 });
 
 (function ($) {
