@@ -3108,7 +3108,8 @@ li.header-item.dropdown > a:hover + .sub__list,
         height: 80px;
         padding: 0 24px;
     }
-    .hide-popup.mobile {
+    .hide-popup.mobile,
+    .hide-filters {
         padding: 16px 13px;
         font-family: 'Klik';
         font-size: 16px;
@@ -4360,6 +4361,7 @@ li.header-item.dropdown > a:hover + .sub__list,
     max-width: 100%;
     padding: 0 70px;
     padding-top: 145px;
+    position: relative;
 }
 
 .rental-page__header {
@@ -4519,7 +4521,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 @media(max-width: 767px) {
     .rental-page {
         padding: 0 20px;
-        padding-top: 84px;
+        margin-top: 84px;
     }
     .rental-page__header {
         margin: 0;
@@ -4902,5 +4904,203 @@ li.header-item.dropdown > a:hover + .sub__list,
         bottom: 0;
         max-width: 90%;
         right: -20px;
+    }
+}
+
+.rental__filters {
+    position: absolute;
+    left: 0;
+    top: 253px;
+    padding: 56px 47px 44px 60px;
+    background: #fff;
+    border-radius: 0 60px 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rental__filters-title {
+    font-family: 'Gogol';
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 64px;
+}
+
+.rental__filters__block {
+    font-family: 'Klik';
+}
+
+.filters__block-title {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+}
+
+.filters__block-inputs {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filters__block-inputs.first {
+    max-height: 64px;
+}
+
+.filters-input__wrapper {
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filters-input {
+    width: 19px;
+    height: 19px;
+    opacity: .4;
+    accent-color: rgba(242, 241, 237, 1);
+}
+
+.filters-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 100%;
+    color: rgba(5, 0, 9, 1);
+}
+
+.filters-reset,
+.filters-apply {
+    align-self: flex-end;
+    font-family: 'Klik';
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.rental__filters .header__wrapper,
+.filters-apply {
+    display: none;
+}
+
+.rental__filters__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+}
+
+@media(max-width: 1800px) {
+    .rental__filters-title {
+        font-size: 48px;
+        line-height: 60px;
+    }
+    .filters__block-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .filters-title {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .rental__filters {
+        top: 335px;
+        padding: 40px 56px 32px 60px;
+    }
+    .rental__filters-title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .filters__block-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .filters-title {
+        font-size: 16px;
+    }
+    .filters__block-inputs {
+        margin-top: 16px;
+        gap: 12px;
+    }
+}
+
+@media(max-width: 767px) {
+    .rental__filters .header__wrapper {
+        display: flex;
+        padding: 6px 0;
+    }
+    .rental__filters {
+        padding: 0 20px;
+        padding-bottom: 32px;
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+        gap: 16px;
+        z-index: -1;
+        opacity: 0;
+        transition: .4s all;
+    }
+    .rental__filters.active {
+        z-index: 50;
+        opacity: 1;
+    }
+    .rental__filters::-webkit-scrollbar {
+        display: none;
+    }
+    .rental__filters__wrapper {
+        margin: 0 auto;
+    }
+    .rental__filters-title {
+        font-size: 28px;
+        line-height: 44px;
+    }
+    .filters__block-title {
+        font-size: 16px;
+        line-height: 100%;
+    }
+    .filters-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .filters__block-inputs {
+        margin-top: 16px;
+        row-gap: 8px;
+        column-gap: 32px;
+    }
+    .filters-reset,
+    .filters-apply {
+        font-size: 16px;
+    }
+    .filters-apply {
+        display: flex;
+    }
+}
+
+.rental__header__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.open-filters {
+    opacity: .8;
+    font-family: 'Klik';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .rental-search {
+        max-width: 50%;
+    }
+    .open-filters {
+        display: block;
     }
 }

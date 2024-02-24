@@ -136,6 +136,65 @@ function popupForm() {
         })
     }
 }
+
+function teplohodFilters() {
+    const openTrigger = document.querySelector('.open-filters')
+    const filtersBlock = document.querySelector('.rental__filters')
+    const closeTrigger = document.querySelector('.hide-filters')
+
+    openTrigger.addEventListener('click', function() {
+        filtersBlock.classList.add('active')
+    })
+
+    closeTrigger.addEventListener('click', function() {
+        filtersBlock.classList.remove('active')
+    })
+}
+
+function teplohodCards() {
+    const vesselCardsWrapper = document.querySelector('.rental__items')
+
+    function checkWidth() {
+        if(vesselCardsWrapper) {
+            if(window.innerWidth > 1800) {
+                addEmptyCard([0, 4])
+            } else if(window.innerWidth > 1439) {
+                addEmptyCard([0, 3])
+            } else if(window.innerWidth > 767) {
+                addEmptyCard([0, 2])
+            } else if(window.innerWidth < 768) {
+                let emptyCards = document.querySelectorAll('.vessel__card.empty')
+
+                emptyCards.forEach(function(card) {
+                    card.remove()
+                })
+
+                teplohodFilters()
+            }
+        }
+    }
+
+    checkWidth()
+    window.addEventListener('resize', checkWidth)
+
+    function addEmptyCard(indexesArr) {
+        let emptyCards = document.querySelectorAll('.vessel__card.empty')
+
+        emptyCards.forEach(function(card) {
+            card.remove()
+        })
+
+        for(let i = 0; i < indexesArr.length; i++) {
+            let cardIndex = indexesArr[i]
+            let emptyCard = document.createElement('div')
+            emptyCard.classList.add('vessel__card', 'empty')
+
+            let referenceElement = vesselCardsWrapper.children[cardIndex]
+            vesselCardsWrapper.insertBefore(emptyCard, referenceElement)
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     try {
         const relaxSwiper = new Swiper('.relax-swiper', {
@@ -160,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     rentalSort()
     selectVesselImage()
     popupForm()
+    teplohodCards()
 });
 
 (function ($) {

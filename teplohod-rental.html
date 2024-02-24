@@ -279,7 +279,98 @@
         <img class="kater-bg" src="img/kater-big.png" alt="">
         
         <section class="rental-page">
+            <div class="rental__filters">
+                <div class="header__wrapper">
+                    <a class="logo" href="index.html">
+                        <img src="img/header/logo.png" alt="">
+                    </a>
+                    <button class="hide-filters">назад</button>
+                </div>
+                <div class="rental__filters__wrapper">
+                    <div class="rental__filters-title gold">Подбор судна</div>
+                    <div class="rental__filters__block filters__block">
+                        <div class="filters__block-title gold">Количество гостей</div>
+                        <div class="filters__block-inputs first">
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-capacity">
+                                <span class="filters-title">до 30</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-capacity">
+                                <span class="filters-title">до 50</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-capacity">
+                                <span class="filters-title">до 100</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-capacity">
+                                <span class="filters-title">до 150</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rental__filters__block filters__block">
+                        <div class="filters__block-title gold">Тип судна</div>
+                        <div class="filters__block-inputs first">
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-vessel-type">
+                                <span class="filters-title">однопалубное</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-vessel-type">
+                                <span class="filters-title">двухпалубное</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rental__filters__block filters__block">
+                        <div class="filters__block-title gold">Стоимость аренды</div>
+                        <div class="filters__block-inputs">
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-price">
+                                <span class="filters-title">до 10000 /час</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-price">
+                                <span class="filters-title">до 20000 /час</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-price">
+                                <span class="filters-title">до 30000 /час</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-price">
+                                <span class="filters-title">от 30000 /час</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rental__filters__block filters__block">
+                        <div class="filters__block-title gold">Мероприятие</div>
+                        <div class="filters__block-inputs">
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-event-type">
+                                <span class="filters-title">выпускной</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-event-type">
+                                <span class="filters-title">корпоратив</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-event-type">
+                                <span class="filters-title">свадьба</span>
+                            </label>
+                            <label class="filters-input__wrapper" for="">
+                                <input class="filters-input" type="radio" name="filters-event-type">
+                                <span class="filters-title">другое</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button class="filters-apply gold">применить</button>
+                <button class="filters-reset gold-light">сбросить</button>
+            </div>
+
             <h1 class="title">Аренда теплоходов</h1>
+
             <div class="rental-page__header">
                 <div class="rental-page__sort page-sort">
                     <div class="page-sort__title gold-light">сортировать по</div>
@@ -296,232 +387,263 @@
                         </svg>
                     </div>
                 </div>
-                <input class="rental-search" type="text" placeholder="поиск по названию">
+                <div class="rental__header__bottom">
+                    <input class="rental-search" type="text" placeholder="поиск по названию">
+                    <button class="open-filters gold-light">показать фильтры</button>
+                </div>
             </div>
             <div class="rental__items">
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/four-wins.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/zvezda-nevi.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">150</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">Four Winns 240</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">звезда невы</h3>
+                        <span class="vessel__card-price gold">от 20000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/crowline-262.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/moskva-73.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">144</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CROWLINE 262</h3>
-                        <span class="vessel__card-price gold">от 9000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">москва-73</h3>
+                        <span class="vessel__card-price gold">от 23000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-260.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/rkm-2.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">50</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 260 <br> SIGNATURE</h3>
-                        <span class="vessel__card-price gold">от 9000 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-260.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
-                        </div>
-                    </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 260 <br> SIGNATURE</h3>
-                        <span class="vessel__card-price gold">от 9000 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/cris-craft-210.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">8</span>
-                        </div>
-                    </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CRIS CRAFT 210</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/sea-ray-180.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">5</span>
-                        </div>
-                    </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">SEA RAY 180</h3>
-                        <span class="vessel__card-price gold">от 6500 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-234.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">11</span>
-                        </div>
-                    </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 234</h3>
+                        <h3 class="vessel__card-name">РКМ-2</h3>
                         <span class="vessel__card-price gold">от 8000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-234.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/moskva-73.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">11</span>
+                            <span class="vessel__peoples-amount gold">144</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 234</h3>
+                        <h3 class="vessel__card-name">москва-73</h3>
+                        <span class="vessel__card-price gold">от 23000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/zvezda-nevi.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">150</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">звезда невы</h3>
+                        <span class="vessel__card-price gold">от 20000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/moskva-73.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">144</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">москва-73</h3>
+                        <span class="vessel__card-price gold">от 23000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/moskva-73.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">144</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">москва-73</h3>
+                        <span class="vessel__card-price gold">от 23000 <span class="roboto">₽</span>/час</span>
+                    </div>
+                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
+                </div>
+                <div class="vessel__card">
+                    <div class="vessel__card__header">
+                        <img class="vessel__card-photo" src="img/vessels/items/rkm-2.png" alt="">
+                        <div class="vessel__peoples">
+                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
+                            <span class="vessel__peoples-amount gold">50</span>
+                        </div>
+                    </div>
+                    <div class="vessel__card__body">
+                        <h3 class="vessel__card-name">РКМ-2</h3>
                         <span class="vessel__card-price gold">от 8000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/crowline-262.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/moskva-73.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">144</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CROWLINE 262</h3>
-                        <span class="vessel__card-price gold">от 9000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">москва-73</h3>
+                        <span class="vessel__card-price gold">от 23000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-260.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/zvezda-nevi.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">150</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 260 <br> SIGNATURE</h3>
-                        <span class="vessel__card-price gold">от 9000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">звезда невы</h3>
+                        <span class="vessel__card-price gold">от 20000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/four-wins.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/zvezda-nevi.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">150</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">Four Winns 240</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">звезда невы</h3>
+                        <span class="vessel__card-price gold">от 20000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/four-wins.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/zvezda-nevi.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">6</span>
+                            <span class="vessel__peoples-amount gold">150</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">Four Winns 240</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">звезда невы</h3>
+                        <span class="vessel__card-price gold">от 20000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
                 <div class="vessel__card">
                     <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/sea-ray-180.png" alt="">
+                        <img class="vessel__card-photo" src="img/vessels/items/antverpen.png" alt="">
                         <div class="vessel__peoples">
                             <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">5</span>
+                            <span class="vessel__peoples-amount gold">36</span>
                         </div>
                     </div>
                     <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">SEA RAY 180</h3>
-                        <span class="vessel__card-price gold">от 6500 <span class="roboto">₽</span>/час</span>
+                        <h3 class="vessel__card-name">антверпен</h3>
+                        <span class="vessel__card-price gold">от 12000 <span class="roboto">₽</span>/час</span>
                     </div>
                     <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
                 </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/chaparral-234.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">11</span>
+            </div>
+        </section>
+        <section class="actions">
+            <h2 class="title">Акции</h2>
+            <div class="actions__items container">
+                <article class="actions__item">
+                    <h3 class="actions__item-title gold">Москва-73</h3>
+                    <img class="actions__item-img" src="img/common-blocks/actions/01.png" alt="">
+                    <div class="actions__item__info">
+                        <p class="actions__item-descr">
+                            Банкет на 70 человек <br> на двухпалубном <br> теплоходе премиум <br> класса
+                        </p>
+                        <div class="actions__item-price price">
+                            <span class="gold">3 часа</span>
+                            <span class="gold-light">от 3499 ₽/чел</span>
                         </div>
                     </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CHAPARRAL 234</h3>
-                        <span class="vessel__card-price gold">от 8000 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/cris-craft-210.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">8</span>
+                </article>
+                <article class="actions__item">
+                    <h3 class="actions__item-title gold">Звезда Невы</h3>
+                    <img class="actions__item-img" src="img/common-blocks/actions/02.png" alt="">
+                    <div class="actions__item__info">
+                        <p class="actions__item-descr">
+                            Фуршет на 90 человек <br> на двухпалубном <br> VIP-теплоходе
+                        </p>
+                        <div class="actions__item-price price">
+                            <span class="gold">3 часа</span>
+                            <span class="gold-light">от 2199 ₽/чел</span>
                         </div>
                     </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CRIS CRAFT 210</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
-                    </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
-                </div>
-                <div class="vessel__card">
-                    <div class="vessel__card__header">
-                        <img class="vessel__card-photo" src="img/vessels/items/cris-craft-210.png" alt="">
-                        <div class="vessel__peoples">
-                            <img class="vessel__peoples-bg" src="img/vessels/header-peoples.png" alt="">
-                            <span class="vessel__peoples-amount gold">8</span>
+                </article>
+                <article class="actions__item">
+                    <h3 class="actions__item-title gold">РКМ-2</h3>
+                    <img class="actions__item-img" src="img/common-blocks/actions/03.png" alt="">
+                    <div class="actions__item__info">
+                        <p class="actions__item-descr">
+                            Фуршет на 40 человек <br> на однопалубном <br> теплоходе
+                        </p>
+                        <div class="actions__item-price price">
+                            <span class="gold">3 часа</span>
+                            <span class="gold-light">от 2299 ₽/чел</span>
                         </div>
                     </div>
-                    <div class="vessel__card__body">
-                        <h3 class="vessel__card-name">CRIS CRAFT 210</h3>
-                        <span class="vessel__card-price gold">от 7000 <span class="roboto">₽</span>/час</span>
+                </article>
+            </div>
+            <button class="click-btn violet-btn actions-btn">подробнее</button>
+            <p class="actions-info gold">Акционные предложения действительны в периоды с 20.04 по 24.05 и с 17.09 по 30.11</p>
+        </section>
+        <section class="relax">
+            <div class="container">
+                <h2 class="relax-title gold-light">Так отдыхают наши клиенты</h2>
+            </div>
+            <div class="swiper relax-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/common-blocks/relax/01.png" alt="">
                     </div>
-                    <a href="teplohod-page.html" class="vessel__card-btn">подробнее</a>
+                    <div class="swiper-slide">
+                        <img src="img/common-blocks/relax/02.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/common-blocks/relax/03.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/common-blocks/relax/01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/common-blocks/relax/02.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
