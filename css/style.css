@@ -4360,7 +4360,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 .rental-page {
     max-width: 100%;
     padding: 0 70px;
-    padding-top: 145px;
+    margin-top: 145px;
     position: relative;
 }
 
@@ -4457,7 +4457,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 @media(max-width: 1800px) {
     .rental-page {
         padding: 0 60px;
-        padding-top: 145px;
+        margin-top: 145px;
     }
     .rental-page__header {
         margin-top: 68px;
@@ -4484,7 +4484,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 @media(max-width: 1439px) {
     .rental-page {
         padding: 0 44px;
-        padding-top: 135px;
+        margin-top: 135px;
     }
     .rental__items {
         gap: 40px;
@@ -4910,7 +4910,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 .rental__filters {
     position: absolute;
     left: 0;
-    top: 253px;
+    top: 107px;
     padding: 56px 47px 44px 60px;
     background: #fff;
     border-radius: 0 60px 60px 0;
@@ -4990,6 +4990,9 @@ li.header-item.dropdown > a:hover + .sub__list,
 }
 
 @media(max-width: 1800px) {
+    .rental__filters {
+        top: 136px;
+    }
     .rental__filters-title {
         font-size: 48px;
         line-height: 60px;
@@ -5005,7 +5008,7 @@ li.header-item.dropdown > a:hover + .sub__list,
 
 @media(max-width: 1439px) {
     .rental__filters {
-        top: 335px;
+        top: 200px;
         padding: 40px 56px 32px 60px;
     }
     .rental__filters-title {

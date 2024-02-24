@@ -152,7 +152,7 @@ function teplohodFilters() {
 }
 
 function teplohodCards() {
-    const vesselCardsWrapper = document.querySelector('.rental__items')
+    const vesselCardsWrapper = document.querySelector('.teplohod-rental__wrapper .rental__items')
 
     function checkWidth() {
         if(vesselCardsWrapper) {
