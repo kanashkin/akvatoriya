@@ -34,19 +34,22 @@ function mobileMenu() {
 
 function openPopup() {
     const openTriggers = document.querySelectorAll('.open-popup')
-    const closeTrigger = document.querySelector('.hide-popup')
+    const closeTriggers = document.querySelectorAll('.hide-popup')
     const popup = document.querySelector('.overlay')
 
-    if (openTriggers && closeTrigger && popup) {
+    if (openTriggers && closeTriggers && popup) {
         openTriggers.forEach(function(btn) {
             btn.addEventListener('click', function() {
                 popup.classList.add('active')
             })
         })
 
-        closeTrigger.addEventListener('click', function() {
-            popup.classList.remove('active')
+        closeTriggers.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                popup.classList.remove('active')
+            })
         })
+        
     }
 }
 
@@ -220,6 +223,26 @@ document.addEventListener('DOMContentLoaded', function() {
     selectVesselImage()
     popupForm()
     teplohodCards()
+
+    try {
+        flatpickr(".date-input", {
+            dateFormat: "d.m.Y  ",
+            enableTime: false,
+            disableMobile: true,
+            locale: {
+                firstDayOfWeek: 8,
+                weekdays: {
+                    shorthand: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                    longhand: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+                },
+                months: {
+                    shorthand: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+                    longhand: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                },
+            },
+        });
+    } catch(e) {console.log(e);}
+
 });
 
 (function ($) {

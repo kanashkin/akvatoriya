@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Акватория | Экскурсии</title>
 </head>
@@ -458,6 +461,7 @@
             <div class="items__list-item item">
                 <div class="item__photo">
                     <img class="item__photo-img" src="img/items/vessels/01.png" alt="">
+                    <button class="item__photo-btn vessel__card-btn hide-popup">свернуть</button>
                 </div>
                 <div class="item__name">
                     <h2 class="item__name-title vessel__card-name">ПАРАДНЫЙ ПЕТЕРБУРГ С ВЫХОДОМ В ФИНСКИЙ ЗАЛИВ</h2>
@@ -524,7 +528,7 @@
                         <div class="buy__form-dates">
                             <div class="buy__input__wrapper">
                                 <div class="buy__form-text mb">Дата мероприятия</div>
-                                <input class="page-input border" type="text" placeholder="дд.мм.гг">
+                                <input class="page-input border date-input" type="text" placeholder="дд.мм.гг">
                             </div>
                             <div class="buy__input__date buy__date">
                                 <div class="buy__date-value">20.01</div>
